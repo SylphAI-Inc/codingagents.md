@@ -1,0 +1,82 @@
+---
+title: "codingagent.md"
+description: "The Aggregator Hub for the AI Coding Agent Ecosystem"
+template: splash
+hero:
+  tagline: "The coding agent ecosystem, documented."
+  actions:
+    - text: Explore Agents
+      link: /agents/claude-code/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub
+      link: https://github.com/SylphAI-Inc/coding_agent
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
+import SubscribeForm from "../../../src/components/SubscribeForm";
+
+<CardGrid>
+  <Card title="10+ Agents">
+    Claude Code · Cursor · Copilot · Codex · Gemini CLI · Devin · Windsurf · Amp · AdaL
+  </Card>
+  <Card title="5+ Config Formats">
+    AGENTS.md · CLAUDE.md · .cursorrules · copilot-instructions.md · SKILL.md
+  </Card>
+  <Card title="2 Protocols">
+    MCP (Model Context Protocol) · ACP (Agent Client Protocol)
+  </Card>
+  <Card title="60K+ Repos">
+    Already shipping AGENTS.md files across the open-source ecosystem
+  </Card>
+</CardGrid>
+
+## Navigate the ecosystem
+
+<CardGrid>
+  <LinkCard
+    title="Coding Agents"
+    description="Profiles and comparisons of every major AI coding agent"
+    href="/agents/claude-code/"
+  />
+  <LinkCard
+    title="Config Formats"
+    description="How to write AGENTS.md, CLAUDE.md, .cursorrules, and more"
+    href="/formats/agents-md/"
+  />
+  <LinkCard
+    title="Protocols"
+    description="MCP vs ACP — what they do and how they compare"
+    href="/protocols/mcp/"
+  />
+  <LinkCard
+    title="Guides"
+    description="Getting started, choosing an agent, multi-agent setups"
+    href="/guides/getting-started/"
+  />
+</CardGrid>
+
+## Models powering the agents
+
+Which LLMs perform best for coding? We track benchmarks weekly. [Full rankings →](/benchmarks/models-for-coding/)
+
+| Model | Provider | SWE-bench Verified | Context | Best For |
+|-------|----------|--------------------|---------|----------|
+| Claude Opus 4.6 | Anthropic | **80.8%** | 200K | Complex refactors, agentic coding |
+| GPT-5.2-Codex | OpenAI | **80.0%** | 128K | Terminal workflows, long-horizon tasks |
+| Claude Opus 4.5 | Anthropic | **80.9%** | 200K | Deep reasoning, legacy code |
+| Gemini 3 Flash | Google | **78.0%** | 1M | Large codebases, best value |
+| Claude Sonnet 4.5 | Anthropic | **77.2%** | 200K | Day-to-day development |
+| Gemini 3 Pro | Google | **~75%** | 1M | Multimodal, massive repos |
+| DeepSeek V3 | DeepSeek | 42.0% | 128K | Budget-friendly |
+| Qwen 2.5 Coder 32B | Alibaba | — | 128K | Local / privacy-first |
+
+## Stay updated
+
+<SubscribeForm client:load />
+
+<p style="text-align: center; opacity: 0.5; margin-top: 2rem; font-size: 0.85rem;">
+  Managed by <a href="https://sylph.ai">Sylph.AI</a> · Built with <a href="https://github.com/adal-cli/adal">AdaL CLI</a>
+</p>

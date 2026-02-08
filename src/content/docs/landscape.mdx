@@ -1,0 +1,77 @@
+---
+title: Ecosystem Landscape
+description: "The complete map of AI coding agents, config formats, protocols, and registries — Feb 2026"
+---
+
+import { Card, CardGrid, Tabs, TabItem } from "@astrojs/starlight/components";
+
+The AI coding agent ecosystem in early 2026 consists of **10+ major agents**, **5+ config formats**, **2 dominant protocols**, and **3+ registries**. This page maps the full landscape.
+
+## Coding Agents
+
+<Tabs>
+  <TabItem label="Market Leaders">
+    | Agent | Company | Type | Protocol | Config Format |
+    |-------|---------|------|----------|--------------|
+    | [Claude Code](/agents/claude-code/) | Anthropic | Terminal | MCP | CLAUDE.md, AGENTS.md, SKILL.md |
+    | [Cursor](/agents/cursor/) | Anysphere | IDE | MCP | .cursorrules, AGENTS.md |
+    | [GitHub Copilot](/agents/github-copilot/) | Microsoft | IDE Plugin | Custom | copilot-instructions.md, AGENTS.md |
+    | [OpenAI Codex](/agents/openai-codex/) | OpenAI | Cloud | Custom | AGENTS.md |
+  </TabItem>
+  <TabItem label="Strong Contenders">
+    | Agent | Company | Type | Protocol | Config Format |
+    |-------|---------|------|----------|--------------|
+    | [Gemini CLI](/agents/gemini-cli/) | Google | Terminal | MCP | AGENTS.md |
+    | [Windsurf](/agents/windsurf/) | Cognition | IDE | Custom | AGENTS.md |
+    | [Amp](/agents/amp/) | Sourcegraph | Terminal + Web | ACP | AGENTS.md |
+    | [Devin](/agents/devin/) | Cognition | Autonomous | Custom | AGENTS.md |
+  </TabItem>
+  <TabItem label="Emerging">
+    | Agent | Company | Type | Protocol | Config Format |
+    |-------|---------|------|----------|--------------|
+    | [AdaL CLI](/agents/adal/) | Sylph.AI | Terminal + Web | MCP | AGENTS.md |
+    | [Cline](/agents/cline/) | Community | VS Code | MCP | AGENTS.md |
+    | [Aider](/agents/aider/) | Paul Gauthier | Terminal | Custom | Custom |
+  </TabItem>
+</Tabs>
+
+## Config Formats
+
+| Format | Owner | Universal? | Nested? | Scripts? | Registry? |
+|--------|-------|-----------|---------|----------|----------|
+| [AGENTS.md](/formats/agents-md/) | Linux Foundation | ✅ | ✅ | ❌ | ❌ |
+| [CLAUDE.md](/formats/claude-md/) | Anthropic | ❌ | ✅ | ❌ | ❌ |
+| [.cursorrules](/formats/cursorrules/) | Cursor | ❌ | ✅ | ❌ | Community |
+| [copilot-instructions.md](/formats/copilot-instructions/) | GitHub | ❌ | ❌ | ❌ | ❌ |
+| [SKILL.md](/formats/skills/) | Vercel + Anthropic | ⚠️ | ❌ | ✅ | ✅ skills.sh |
+
+## Protocols
+
+<CardGrid>
+  <Card title="MCP — Model Context Protocol" icon="random">
+    **By Anthropic** — Connects AI models to external tools and data. The "USB-C for AI."
+
+    Adopted by: Claude Code, Cursor, Gemini CLI, AdaL CLI, Cline
+
+    [Learn more →](/protocols/mcp/)
+  </Card>
+  <Card title="ACP — Agent Client Protocol" icon="random">
+    **By Zed + JetBrains** — Connects AI agents to any editor environment.
+
+    Adopted by: Amp, JetBrains AI, Zed
+
+    [Learn more →](/protocols/acp/)
+  </Card>
+</CardGrid>
+
+## Registries & Directories
+
+| Registry | Owner | What It Lists | Scale |
+|----------|-------|--------------|-------|
+| [skills.sh](https://skills.sh) | Vercel | Reusable agent skills | 35K+ installs |
+| [ACP Registry](https://zed.dev/acp) | Zed / JetBrains | ACP-compatible agents | Growing |
+| **codingagent.md** | Sylph.AI | Everything | You're here! |
+
+---
+
+*Last updated: Feb 2026 · [Edit this page](https://github.com/SylphAI-Inc/coding_agent/edit/main/src/content/docs/landscape.mdx)*

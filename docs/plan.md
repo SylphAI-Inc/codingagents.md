@@ -209,6 +209,90 @@ graph LR
 - [ ] Create embeddable badges ("Listed on codingagent.md")
 - [ ] Start SEO link-building campaign
 
+### 3.4 Weekly Digest / Newsletter Strategy
+
+The weekly digest is a core growth lever — it keeps subscribers engaged, drives repeat traffic, and positions codingagent.md as the **pulse of the coding agent ecosystem**.
+
+**Format: "This Week in Coding Agents"**
+
+Each issue follows a consistent template:
+
+| Section | Content | Source |
+|---------|---------|--------|
+| 🔥 Top Story | Biggest launch or announcement of the week | Twitter/X, HN, official blogs |
+| 🚀 New Releases | Agent updates, version bumps, new tools | GitHub releases, changelogs |
+| 🏆 Model Spotlight | Which models are best for coding right now | Benchmarks, community reports, our own testing |
+| 📊 Benchmark Watch | New eval results, leaderboard changes | Aider benchmarks, SWE-bench, LiveCodeBench |
+| 🛠️ Skill of the Week | Highlighted skill from skills.sh or community | skills.sh trending, GitHub |
+| 💡 Tip of the Week | Practical config/workflow tip | Community, our own guides |
+| 📰 Quick Links | 5-7 curated links worth reading | Aggregated from all sources |
+
+**Content Aggregation Pipeline:**
+
+```mermaid
+graph LR
+    subgraph "Sources"
+        S1[Twitter/X Lists]
+        S2[Hacker News /new]
+        S3[Reddit - r/ClaudeAI, r/ChatGPTCoding]
+        S4[GitHub Trending]
+        S5[Agent Blogs & Changelogs]
+        S6[Arxiv - cs.SE, cs.AI]
+    end
+
+    subgraph "Curation"
+        C1[Daily Scan - 15min]
+        C2[Weekly Draft - Friday]
+        C3[Review & Publish - Saturday]
+    end
+
+    subgraph "Distribution"
+        D1[Newsletter Email]
+        D2[codingagent.md/digest/ page]
+        D3[Twitter/X Thread]
+        D4[LinkedIn Post]
+    end
+
+    S1 --> C1
+    S2 --> C1
+    S3 --> C1
+    S4 --> C1
+    S5 --> C1
+    S6 --> C1
+    C1 --> C2
+    C2 --> C3
+    C3 --> D1
+    C3 --> D2
+    C3 --> D3
+    C3 --> D4
+```
+
+**"Models for Coding" Recurring Section:**
+
+A key differentiator — we maintain a **living ranking of models best-suited for coding tasks**, updated weekly:
+
+| Model | Provider | Strengths | Best For | Benchmark Score |
+|-------|----------|-----------|----------|----------------|
+| Claude Sonnet 4 | Anthropic | Large context, agentic | Complex refactors, multi-file | SWE-bench: 72.7% |
+| GPT-4.1 | OpenAI | Instruction following, fast | Quick edits, code review | SWE-bench: 54.6% |
+| Gemini 2.5 Pro | Google | Long context, multimodal | Large codebases, docs | SWE-bench: 63.8% |
+| DeepSeek V3 | DeepSeek | Cost-effective, open | Budget-friendly coding | SWE-bench: 42.0% |
+| Qwen 2.5 Coder | Alibaba | Open-source, local | Privacy-first, local dev | HumanEval: 65.9% |
+
+*Scores are illustrative — real data updated weekly from public benchmarks.*
+
+**Newsletter Growth Tactics:**
+1. **Content gating**: Some digest analysis exclusive to subscribers
+2. **Referral program**: "Share with 3 devs, get early access to benchmarks"
+3. **Cross-promotion**: Mention digest in every new article published on the site
+4. **Archive as SEO**: Each weekly digest gets its own page at `/digest/week-N` for long-tail search
+5. **Community picks**: Let subscribers vote on "Agent of the Week"
+
+**Target Cadence:**
+- **Daily**: Quick scan of sources, bookmark interesting items (15 min)
+- **Friday**: Draft the digest from bookmarked items (1 hour)
+- **Saturday morning**: Publish & distribute across all channels
+
 ---
 
 ## 4. Technical Architecture
@@ -482,4 +566,4 @@ codingagent.md visitor
 7. [ ] Configure DNS for codingagent.md domain
 8. [ ] Deploy MVP site
 9. [ ] Write and submit HN launch post
-10. [ ] Set up PostHog analytics
+10. [ ] Set up Google Search Console + Plausible analytics
