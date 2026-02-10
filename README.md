@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🤖 codingagent.md
+<img src="public/logo.png" alt="codingagent.md" width="80">
+
+# codingagent.md
 
 **The Aggregator Hub for the AI Coding Agent Ecosystem**<br>
 Every agent. Every format. One place.
