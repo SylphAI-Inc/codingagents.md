@@ -21,7 +21,7 @@ The coding agent ecosystem is fragmenting fast. Developers need a single source 
 
 | 📊 | The Landscape |
 |----|--------------|
-| **10+ agents** | Claude Code · Cursor · Copilot · Codex · Gemini CLI · Devin · Windsurf · Amp · AdaL |
+| **10+ agents** | Claude Code · Cursor · Copilot · Codex · Gemini CLI · Devin · Windsurf · Amp · AdaL CLI |
 | **5+ formats** | AGENTS.md · CLAUDE.md · .cursorrules · copilot-instructions.md · SKILL.md |
 | **2 protocols** | MCP (Model Context Protocol) · ACP (Agent Client Protocol) |
 | **60K+ repos** | Already shipping AGENTS.md files across open source |
