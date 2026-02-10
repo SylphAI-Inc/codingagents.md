@@ -1,66 +1,88 @@
-# codingagent.md
+<div align="center">
 
-**The Aggregator Hub for the AI Coding Agent Ecosystem**
+# 🤖 codingagent.md
 
-🌐 Domain: [codingagent.md](https://codingagent.md)
-🏢 Managed by [Sylph.AI](https://sylph.ai) · Built with [AdaL CLI](https://github.com/adal-cli/adal)
+**The Aggregator Hub for the AI Coding Agent Ecosystem**<br>
+Every agent. Every format. One place.
+
+[![Visit Site](https://img.shields.io/badge/🌐_codingagent.md-live-00FF88?style=for-the-badge)](https://codingagent.md)
+[![Built with AdaL](https://img.shields.io/badge/Built_with-AdaL_CLI-blueviolet?style=for-the-badge)](https://sylph.ai)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
+</div>
 
 ---
 
-## What is codingagent.md?
-
-codingagent.md is the central directory and knowledge hub for the AI coding agent ecosystem. We aggregate, compare, and document every major coding agent, configuration format, skill registry, and protocol — helping developers navigate the rapidly expanding landscape.
-
 ## Why?
 
-The coding agent ecosystem is fragmenting fast:
-- **60K+ repos** now use AGENTS.md files
-- **35K+ skill installs** on Vercel's skills.sh
-- **10+ major agents** (Claude Code, Cursor, Copilot, Codex, Gemini CLI, Devin, etc.)
-- **3+ competing protocols** (ACP, MCP, custom)
-- **5+ config formats** (AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md, SKILLS/)
+The coding agent ecosystem is fragmenting fast. Developers need a single source of truth.
 
-Developers need a single source of truth. That's codingagent.md.
+| 📊 | The Landscape |
+|----|--------------|
+| **10+ agents** | Claude Code · Cursor · Copilot · Codex · Gemini CLI · Devin · Windsurf · Amp · AdaL |
+| **5+ formats** | AGENTS.md · CLAUDE.md · .cursorrules · copilot-instructions.md · SKILL.md |
+| **2 protocols** | MCP (Model Context Protocol) · ACP (Agent Client Protocol) |
+| **60K+ repos** | Already shipping AGENTS.md files across open source |
 
-## Content Structure
+## 📖 Content
 
+| Section | Description |
+|---------|-------------|
+| [**Coding Agents**](https://codingagent.md/agents/claude-code/) | Deep-dive profiles of every major AI coding agent |
+| [**Config Formats**](https://codingagent.md/formats/agents-md/) | How to write AGENTS.md, CLAUDE.md, .cursorrules, and more |
+| [**Protocols**](https://codingagent.md/protocols/mcp/) | MCP vs ACP — what they do and how they compare |
+| [**Benchmarks**](https://codingagent.md/benchmarks/models-for-coding/) | LLM coding benchmarks — SWE-bench rankings, updated weekly |
+| [**Guides**](https://codingagent.md/guides/getting-started/) | Getting started, choosing an agent, multi-agent setups |
+
+## 🛠 Tech Stack
+
+[Astro](https://astro.build) + [Starlight](https://starlight.astro.build) · Hosted on [Vercel](https://vercel.com) · Domains: [codingagent.md](https://codingagent.md) & [codingagents.md](https://codingagents.md)
+
+## 🤝 Contributing
+
+We'd love your help! Here's how to get involved:
+
+- **Add a new agent** — Create a file in `src/content/docs/agents/` following existing patterns
+- **Improve existing pages** — Fix errors, add examples, update benchmarks
+- **Add a config format** — Document a new agent config format in `src/content/docs/formats/`
+- **Report issues** — [Open an issue](https://github.com/SylphAI-Inc/coding_agent/issues) for bugs, suggestions, or missing agents
+
+### Quick Start
+
+```bash
+git clone https://github.com/SylphAI-Inc/coding_agent.git
+cd coding_agent
+npm install
+npm run dev    # → http://localhost:4321
 ```
-codingagent.md/
-├── README.md                    # This file
-├── docs/
-│   ├── plan.md                  # Strategic plan & roadmap
-│   ├── landscape.md             # Full ecosystem landscape map
-│   ├── agents/                  # Individual agent profiles
-│   │   ├── claude-code.md
-│   │   ├── cursor.md
-│   │   ├── github-copilot.md
-│   │   ├── openai-codex.md
-│   │   ├── gemini-cli.md
-│   │   ├── devin.md
-│   │   ├── windsurf.md
-│   │   ├── amp.md
-│   │   └── adal.md
-│   ├── formats/                 # Configuration format guides
-│   │   ├── agents-md.md
-│   │   ├── claude-md.md
-│   │   ├── cursorrules.md
-│   │   ├── copilot-instructions.md
-│   │   └── skills-format.md
-│   ├── protocols/               # Protocol comparisons
-│   │   ├── acp.md
-│   │   ├── mcp.md
-│   │   └── comparison.md
-│   ├── guides/                  # How-to guides
-│   │   ├── getting-started.md
-│   │   ├── choosing-an-agent.md
-│   │   ├── writing-agents-md.md
-│   │   └── multi-agent-setup.md
-│   └── benchmarks/              # Agent comparisons & evals
-│       ├── methodology.md
-│       └── results-2026-q1.md
-└── site/                        # Website source (future)
-    └── .gitkeep
+
+Content lives in `src/content/docs/` — add or edit Markdown files and they appear in the sidebar automatically. No build config needed.
+
+### Page Template
+
+Every agent/format page follows a simple structure:
+
+```markdown
+---
+title: "Agent Name"
+description: "One-line description"
+---
+
+| Field | Value |
+|-------|-------|
+| **Company** | ... |
+| **Pricing** | ... |
+
+## Overview
+...
+
+## Key Features
+...
 ```
+
+## 📬 Stay Updated
+
+Subscribe to weekly ecosystem updates at [codingagent.md](https://codingagent.md) — new agents, format changes, and benchmark results.
 
 ## License
 
