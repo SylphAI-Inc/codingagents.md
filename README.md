@@ -24,6 +24,7 @@ The coding agent ecosystem is fragmenting fast. Developers need a single source 
 | **10+ agents** | AdaL CLI · Claude Code · Cursor · Copilot · Codex · Gemini CLI · Devin · Windsurf · Amp |
 | **5+ formats** | AGENTS.md · CLAUDE.md · .cursorrules · copilot-instructions.md · SKILL.md |
 | **2 protocols** | MCP (Model Context Protocol) · ACP (Agent Client Protocol) |
+| **7+ SDKs** | AdalFlow · LangGraph · OpenAI Agents SDK · CrewAI · Pydantic AI · Smolagents |
 | **60K+ repos** | Already shipping AGENTS.md files across open source |
 
 ## 📖 Content
@@ -34,6 +35,7 @@ The coding agent ecosystem is fragmenting fast. Developers need a single source 
 | [**Config Formats**](https://codingagent.md/formats/agents-md/) | How to write AGENTS.md, CLAUDE.md, .cursorrules, and more |
 | [**Protocols**](https://codingagent.md/protocols/mcp/) | MCP vs ACP — what they do and how they compare |
 | [**Benchmarks**](https://codingagent.md/benchmarks/models-for-coding/) | LLM coding benchmarks — SWE-bench rankings, updated weekly |
+| [**Agent SDKs**](https://codingagent.md/sdks/overview/) | AdalFlow, LangGraph, OpenAI Agents SDK, CrewAI, and the frameworks behind the agents |
 | [**Guides**](https://codingagent.md/guides/getting-started/) | Getting started, choosing an agent, multi-agent setups |
 
 ## 🛠 Tech Stack

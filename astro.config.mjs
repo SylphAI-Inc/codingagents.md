@@ -69,6 +69,10 @@ export default defineConfig({
         autogenerate: { directory: "guides" },
       },
       {
+        label: "Agent SDKs",
+        autogenerate: { directory: "sdks" },
+      },
+      {
         label: "Benchmarks",
         autogenerate: { directory: "benchmarks" },
       },
