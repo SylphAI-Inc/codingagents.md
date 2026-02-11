@@ -446,6 +446,11 @@ hr {
   border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
+/* Hide anchor link icons on headings */
+.sl-markdown-content .sl-anchor-link {
+  display: none !important;
+}
+
 /* ============================================
    RIGHT SIDEBAR - Table of Contents (Modern)
    ============================================ */
