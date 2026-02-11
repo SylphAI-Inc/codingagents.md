@@ -27,17 +27,17 @@ Your README.md is for humans. AGENTS.md is for AI agents. It tells them:
 
 | Agent | Reads AGENTS.md |
 |-------|:---:|
-| Claude Code | ✅ |
-| Cursor | ✅ |
-| GitHub Copilot | ✅ |
-| OpenAI Codex | ✅ |
-| Gemini CLI | ✅ |
-| Devin | ✅ |
-| Windsurf | ✅ |
-| Amp | ✅ |
-| AdaL CLI | ✅ |
+| [Claude Code](/agents/claude-code/) | ✅ |
+| [Cursor](/agents/cursor/) | ✅ |
+| [GitHub Copilot](/agents/github-copilot/) | ✅ |
+| [OpenAI Codex](/agents/openai-codex/) | ✅ |
+| [Gemini CLI](/agents/gemini-cli/) | ✅ |
+| [Devin](/agents/devin/) | ✅ |
+| [Windsurf](/agents/windsurf/) | ✅ |
+| [Amp](/agents/amp/) | ✅ |
+| [AdaL CLI](/agents/adal/) | ✅ |
 | Factory.ai | ✅ |
-| Cline | ✅ |
+| [Cline](/agents/cline/) | ✅ |
 | Roo Code | ✅ |
 
 ## How to Write One

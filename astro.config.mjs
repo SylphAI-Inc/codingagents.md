@@ -25,6 +25,7 @@ export default defineConfig({
     customCss: ["./src/styles/custom.css"],
     favicon: "/favicon.png",
     head: [
+      // Open Graph
       {
         tag: "meta",
         attrs: {
@@ -35,10 +36,79 @@ export default defineConfig({
       {
         tag: "meta",
         attrs: {
+          property: "og:type",
+          content: "website",
+        },
+      },
+      {
+        tag: "meta",
+        attrs: {
+          property: "og:site_name",
+          content: "CodingAgents.md",
+        },
+      },
+      // Twitter
+      {
+        tag: "meta",
+        attrs: {
           name: "twitter:card",
           content: "summary_large_image",
         },
       },
+      {
+        tag: "meta",
+        attrs: {
+          name: "twitter:site",
+          content: "@SylphAI_Inc",
+        },
+      },
+      // Additional Meta Tags
+      {
+        tag: "meta",
+        attrs: {
+          name: "author",
+          content: "SylphAI",
+        },
+      },
+      {
+        tag: "meta",
+        attrs: {
+          name: "keywords",
+          content: "coding agents, AI coding, Claude Code, Cursor, GitHub Copilot, Codex, MCP, agent SDK, AI development, code assistant",
+        },
+      },
+      // JSON-LD Structured Data - Organization
+      {
+        tag: "script",
+        attrs: { type: "application/ld+json" },
+        content: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "CodingAgents.md",
+          "url": "https://codingagents.md",
+          "logo": "https://codingagents.md/favicon.png",
+          "description": "The Aggregator Hub for the AI Coding Agent Ecosystem",
+          "sameAs": ["https://github.com/SylphAI-Inc/codingagents.md"]
+        }),
+      },
+      // JSON-LD Structured Data - WebSite with SearchAction
+      {
+        tag: "script",
+        attrs: { type: "application/ld+json" },
+        content: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "CodingAgents.md",
+          "url": "https://codingagents.md",
+          "description": "The open directory for coding agents, models, SDKs, benchmarks, tools, MCPs, skills, protocols, and research.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://codingagents.md/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }),
+      },
+      // Logo click handler
       {
         tag: "script",
         content: `document.addEventListener('DOMContentLoaded',()=>{const img=document.querySelector('.site-title img');if(img){img.style.cursor='pointer';img.addEventListener('click',(e)=>{e.preventDefault();e.stopPropagation();window.open('https://sylph.ai','_blank');});}});`,

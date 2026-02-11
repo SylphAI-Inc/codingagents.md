@@ -26,13 +26,13 @@ MCP servers expose **tools** (functions the agent can call), **resources** (data
 
 | Agent | MCP Support |
 |-------|:-----------:|
-| Claude Code | ✅ Native |
-| Cursor | ✅ |
-| Gemini CLI | ✅ |
-| AdaL CLI | ✅ |
-| Cline | ✅ |
+| [Claude Code](/agents/claude-code/) | ✅ Native |
+| [Cursor](/agents/cursor/) | ✅ |
+| [Gemini CLI](/agents/gemini-cli/) | ✅ |
+| [AdaL CLI](/agents/adal/) | ✅ |
+| [Cline](/agents/cline/) | ✅ |
 | Roo Code | ✅ |
-| Windsurf | ✅ |
+| [Windsurf](/agents/windsurf/) | ✅ |
 
 ## Popular MCP Servers
 
@@ -50,7 +50,7 @@ MCP servers expose **tools** (functions the agent can call), **resources** (data
 | **Purpose** | Give models access to external capabilities | Let agents work in any IDE |
 | **Analogy** | USB-C (one plug, many devices) | App Store (one agent, many editors) |
 
-They're complementary — not competing.
+They're complementary — not competing. See [ACP protocol guide](/protocols/acp/) for more details.
 
 ---
 

@@ -7,7 +7,7 @@ description: "Cursor's AI coding rules format — project, user, and team-level 
 
 `.cursorrules` is Cursor's configuration format for customizing AI behavior. It defines coding rules, style preferences, and project context.
 
-**Owner**: Anysphere (Cursor)
+**Owner**: Anysphere ([Cursor](/agents/cursor/))
 **Docs**: [Cursor Rules](https://cursor.com/docs/context/rules)
 
 ## Types of Rules
@@ -43,7 +43,7 @@ You are an expert TypeScript developer.
 
 - [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) — Community collection
 
-Cursor now also reads AGENTS.md for universal instructions.
+Cursor now also reads [AGENTS.md](/formats/agents-md/) for universal instructions.
 
 ---
 

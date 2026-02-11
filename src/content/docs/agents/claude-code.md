@@ -33,7 +33,7 @@ Claude Code is Anthropic's agentic coding tool that runs in your terminal. It ca
 ## Config Formats
 
 ### CLAUDE.md
-Project-specific memory and instructions. Claude Code reads this automatically on every conversation.
+Project-specific memory and instructions. Claude Code reads this automatically on every conversation. See [CLAUDE.md format guide](/formats/claude-md/).
 
 ```markdown
 # CLAUDE.md

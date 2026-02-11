@@ -7,7 +7,7 @@ description: "GitHub Copilot's custom instruction format for project-specific AI
 
 `copilot-instructions.md` is GitHub Copilot's project-specific configuration file.
 
-**Owner**: Microsoft / GitHub
+**Owner**: Microsoft / GitHub ([GitHub Copilot](/agents/github-copilot/))
 **Location**: `.github/copilot-instructions.md`
 
 ## Template
@@ -29,7 +29,7 @@ This is a Python FastAPI backend.
 - Pydantic models for API schemas
 ```
 
-GitHub Copilot now also reads AGENTS.md files.
+GitHub Copilot now also reads [AGENTS.md](/formats/agents-md/) files.
 
 ---
 

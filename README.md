@@ -30,12 +30,12 @@ The coding agent ecosystem is fragmenting fast. Developers need a single source 
 
 | Section | Description |
 |---------|-------------|
-| [**Coding Agents**](https://codingagent.md/agents/claude-code/) | Deep-dive profiles of every major AI coding agent |
-| [**Config Formats**](https://codingagent.md/formats/agents-md/) | How to write AGENTS.md, CLAUDE.md, .cursorrules, and more |
-| [**Protocols**](https://codingagent.md/protocols/mcp/) | MCP vs ACP — what they do and how they compare |
-| [**Benchmarks**](https://codingagent.md/benchmarks/models-for-coding/) | LLM coding benchmarks — SWE-bench rankings, updated weekly |
-| [**Agent SDKs**](https://codingagent.md/sdks/overview/) | AdalFlow, LangGraph, OpenAI Agents SDK, CrewAI, and the frameworks behind the agents |
-| [**Guides**](https://codingagent.md/guides/getting-started/) | Getting started, choosing an agent, multi-agent setups |
+| [**Coding Agents**](https://codingagents.md/agents/claude-code/) | Deep-dive profiles of every major AI coding agent |
+| [**Config Formats**](https://codingagents.md/formats/agents-md/) | How to write AGENTS.md, CLAUDE.md, .cursorrules, and more |
+| [**Protocols**](https://codingagents.md/protocols/mcp/) | MCP vs ACP — what they do and how they compare |
+| [**Benchmarks**](https://codingagents.md/benchmarks/models-for-coding/) | LLM coding benchmarks — SWE-bench rankings, updated weekly |
+| [**Agent SDKs**](https://codingagents.md/sdks/overview/) | AdalFlow, LangGraph, OpenAI Agents SDK, CrewAI, and the frameworks behind the agents |
+| [**Guides**](https://codingagents.md/guides/getting-started/) | Getting started, choosing an agent, multi-agent setups |
 
 ## 🛠 Tech Stack
 
@@ -48,13 +48,15 @@ We'd love your help! Here's how to get involved:
 - **Add a new agent** — Create a file in `src/content/docs/agents/` following existing patterns
 - **Improve existing pages** — Fix errors, add examples, update benchmarks
 - **Add a config format** — Document a new agent config format in `src/content/docs/formats/`
-- **Report issues** — [Open an issue](https://github.com/SylphAI-Inc/coding_agent/issues) for bugs, suggestions, or missing agents
+- **Report issues** — [Open an issue](https://github.com/SylphAI-Inc/codingagents.md/issues) for bugs, suggestions, or missing agents
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ### Quick Start
 
 ```bash
-git clone https://github.com/SylphAI-Inc/coding_agent.git
-cd coding_agent
+git clone https://github.com/SylphAI-Inc/codingagents.md.git
+cd codingagents.md
 npm install
 npm run dev    # → http://localhost:4321
 ```
@@ -85,7 +87,7 @@ description: "One-line description"
 
 ## 📬 Stay Updated
 
-Subscribe to weekly ecosystem updates at [codingagent.md](https://codingagent.md) — new agents, format changes, and benchmark results.
+Subscribe to weekly ecosystem updates at [codingagents.md](https://codingagents.md) — new agents, format changes, and benchmark results.
 
 ## License
 

@@ -8,7 +8,7 @@ description: "Anthropic's project config format for Claude Code — persistent m
 CLAUDE.md is a Markdown file that provides persistent memory and project-specific instructions to Claude Code. It's read automatically at the start of every conversation.
 
 **Owner**: Anthropic
-**Used by**: Claude Code exclusively
+**Used by**: [Claude Code](/agents/claude-code/) exclusively
 
 ## How It Works
 

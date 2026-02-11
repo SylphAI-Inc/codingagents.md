@@ -46,7 +46,7 @@ You are an expert TypeScript developer working on a Next.js 15 project.
 - Prefer named exports
 ```
 
-Cursor also reads AGENTS.md (universal format).
+See full [.cursorrules format guide](/formats/cursorrules/). Cursor also reads [AGENTS.md](/formats/agents-md/) (universal format).
 
 ## Pricing
 

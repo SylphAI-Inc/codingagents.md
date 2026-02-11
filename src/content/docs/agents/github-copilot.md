@@ -11,7 +11,7 @@ description: "Microsoft's AI coding assistant — IDE plugin, agent mode, deep G
 | **Type** | IDE plugin + Agent mode |
 | **Pricing** | $10-39/mo (free for students/OSS) |
 | **Protocol** | Custom |
-| **Config Formats** | copilot-instructions.md, AGENTS.md |
+| **Config Formats** | [copilot-instructions.md](/formats/copilot-instructions/), [AGENTS.md](/formats/agents-md/) |
 | **Website** | [github.com/features/copilot](https://github.com/features/copilot) |
 
 ## What It Does
