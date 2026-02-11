@@ -1,0 +1,6 @@
+# robots.txt for codingagents.md
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://codingagents.md/sitemap-index.xml

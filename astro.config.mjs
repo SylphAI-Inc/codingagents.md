@@ -4,7 +4,7 @@ import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  site: "https://codingagent.md",
+  site: "https://codingagents.md",
   devToolbar: { enabled: false },
   integrations: [starlight({
     title: "CodingAgents.md",
@@ -29,7 +29,7 @@ export default defineConfig({
         tag: "meta",
         attrs: {
           property: "og:image",
-          content: "https://codingagent.md/og-image.png",
+          content: "https://codingagents.md/og-image.png",
         },
       },
       {
