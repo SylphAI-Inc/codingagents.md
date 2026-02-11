@@ -70,6 +70,11 @@ main {
   background: #080505 !important;
 }
 
+/* Widen content area by overriding Starlight's content width variable */
+:root {
+  --sl-content-width: 100% !important;
+}
+
 starlight-theme-select,
 [data-select-theme] {
   display: none !important;
@@ -217,6 +222,30 @@ header.header .social-icons a svg {
   color: rgba(255, 255, 255, 0.82);
 }
 
+/* Ensure all text is readable on dark background */
+.sl-markdown-content p,
+.sl-markdown-content li,
+.sl-markdown-content span,
+.sl-markdown-content div,
+.sl-markdown-content blockquote,
+.sl-markdown-content figcaption,
+.sl-markdown-content dt,
+.sl-markdown-content dd {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.sl-markdown-content h4,
+.sl-markdown-content h5,
+.sl-markdown-content h6 {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Force light text on any nested elements */
+[data-theme="light"] .sl-markdown-content,
+[data-theme="light"] .sl-markdown-content * {
+  color: inherit;
+}
+
 .sl-markdown-content h2 {
   font-family: var(--sl-font-mono);
   text-transform: uppercase;
@@ -250,11 +279,67 @@ header.header .social-icons a svg {
   color: #34d399;
 }
 
+/* Global table controls */
+:root {
+  --table-width: 100%;
+  --table-border-color: rgba(255, 255, 255, 0.06);
+  --table-cell-padding: 0.65rem 1rem;
+  --table-header-bg: transparent;
+  --table-row-even-bg: rgba(255, 255, 255, 0.015);
+  --table-row-hover-bg: rgba(255, 255, 255, 0.035);
+}
+
 .sl-markdown-content table {
   border-collapse: collapse;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  table-layout: fixed !important;
+  display: table !important;
+}
+
+/* Force ALL table wrappers and ancestors to full width */
+.sl-markdown-content > div:has(> table),
+.sl-markdown-content > table,
+.sl-markdown-content .table-container,
+.sl-markdown-content div:has(table),
+.sl-markdown-content section:has(table) {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  overflow-x: auto !important;
+}
+
+/* Starlight's table scroll wrapper */
+.sl-markdown-content .sl-table-container,
+.sl-markdown-content [class*="table"],
+.content-panel table,
+main table,
+article table {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Force table cells to stretch */
+.sl-markdown-content table td,
+.sl-markdown-content table th {
+  width: auto !important;
+}
+
+/* Force full width on all content wrapper children containing tables */
+.sl-markdown-content *:has(table) {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Override any inline or scoped table widths */
+table[style],
+.sl-markdown-content table[style] {
+  width: 100% !important;
 }
 
 .sl-markdown-content th {
@@ -279,9 +364,27 @@ header.header .social-icons a svg {
   background: rgba(255, 255, 255, 0.02);
 }
 
-.sl-markdown-content td:first-child {
+.sl-markdown-content td:first-child,
+.sl-markdown-content tbody th {
   color: #fff;
   font-weight: 500;
+  background: transparent !important;
+}
+
+/* Ensure all table cells have consistent background */
+.sl-markdown-content td,
+.sl-markdown-content tbody th {
+  background: transparent !important;
+}
+
+.sl-markdown-content tr:nth-child(odd) td,
+.sl-markdown-content tr:nth-child(odd) th {
+  background: transparent !important;
+}
+
+.sl-markdown-content tr:nth-child(even) td,
+.sl-markdown-content tr:nth-child(even) th {
+  background: rgba(255, 255, 255, 0.015) !important;
 }
 
 .sl-markdown-content td a {
@@ -289,12 +392,9 @@ header.header .social-icons a svg {
   font-weight: 600;
 }
 
-.sl-markdown-content tr:nth-child(even) td {
-  background: rgba(255, 255, 255, 0.015);
-}
-
-.sl-markdown-content tr:nth-child(even):hover td {
-  background: rgba(255, 255, 255, 0.035);
+.sl-markdown-content tr:nth-child(even):hover td,
+.sl-markdown-content tr:nth-child(even):hover th {
+  background: rgba(255, 255, 255, 0.035) !important;
 }
 
 .card {
@@ -344,6 +444,232 @@ header.header .social-icons a svg {
 
 hr {
   border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ============================================
+   RIGHT SIDEBAR - Table of Contents (Modern)
+   ============================================ */
+
+/* Right sidebar - natural flow */
+.right-sidebar {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* ============================================
+   CENTRALIZED LAYOUT - constrain page width on ultrawide screens
+   ============================================ */
+
+/* Limit the full page width so it doesn't stretch on ultrawide monitors */
+html {
+  max-width: 1600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+
+.right-sidebar-panel {
+  padding: 1rem 0 !important;
+}
+
+/* "On this page" heading - match left sidebar */
+.right-sidebar h2,
+starlight-toc h2 {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  margin-bottom: 0.75rem !important;
+}
+
+/* TOC list styling */
+starlight-toc ul,
+.right-sidebar ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* TOC links - match left sidebar colors */
+starlight-toc a,
+.right-sidebar a {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-size: 0.8rem !important;
+  line-height: 1.4 !important;
+  display: block !important;
+  padding: 0.25rem 0 0.25rem 0.5rem !important;
+  margin: 0 !important;
+  transition: color 0.2s ease !important;
+  text-decoration: none !important;
+  border-left: 2px solid transparent !important;
+}
+
+starlight-toc a:hover,
+.right-sidebar a:hover {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Active TOC item - match left sidebar */
+starlight-toc a[aria-current="true"],
+.right-sidebar a[aria-current="true"] {
+  color: #00FF88 !important;
+  font-weight: 600;
+  border-left-color: #00FF88 !important;
+}
+
+/* Nested items */
+starlight-toc ul ul a,
+.right-sidebar ul ul a {
+  padding-left: 1rem !important;
+}
+
+/* ============================================
+   CODE BLOCKS - Dark Theme
+   ============================================ */
+
+/* Force dark on ALL code elements */
+.sl-markdown-content pre,
+.expressive-code,
+.expressive-code pre,
+.expressive-code code,
+figure.expressive-code,
+[data-theme="light"] .sl-markdown-content pre,
+[data-theme="light"] .expressive-code,
+[data-theme="light"] .expressive-code pre,
+[data-theme="light"] figure.expressive-code {
+  background: #0d0d0d !important;
+  background-color: #0d0d0d !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.sl-markdown-content pre {
+  background: #0d0d0d !important;
+  background-color: #0d0d0d !important;
+  border-radius: 8px !important;
+  padding: 1.25rem !important;
+  line-height: 1.7 !important;
+  font-size: 0.875rem !important;
+  overflow-x: auto !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Inline code (backticks) - use :not(pre) to avoid affecting code blocks */
+.sl-markdown-content :not(pre) > code,
+[data-theme="light"] .sl-markdown-content :not(pre) > code {
+  background: rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #00FF88 !important;
+  padding: 0.15em 0.4em !important;
+  border-radius: 4px !important;
+  font-family: var(--sl-font-mono) !important;
+  font-size: 0.85em !important;
+  border: none !important;
+}
+
+/* Code inside pre blocks */
+.sl-markdown-content pre code,
+[data-theme="light"] .sl-markdown-content pre code {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: inherit !important;
+}
+
+/* Expressive code frame */
+.expressive-code .frame,
+.expressive-code figure.frame,
+[data-theme="light"] .expressive-code .frame {
+  background: #0d0d0d !important;
+  background-color: #0d0d0d !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expressive-code .frame pre,
+[data-theme="light"] .expressive-code .frame pre {
+  background: #0d0d0d !important;
+  background-color: #0d0d0d !important;
+  border: none !important;
+  line-height: 1.7 !important;
+  font-size: 0.875rem !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Header / file name bar */
+.expressive-code .header,
+.expressive-code .frame .header,
+.expressive-code figure.frame figcaption,
+.expressive-code .frame figcaption,
+.expressive-code figcaption,
+[data-theme="light"] .expressive-code .header,
+[data-theme="light"] .expressive-code figcaption {
+  background: #111 !important;
+  background-color: #111 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Title/filename label - clear */
+.expressive-code .frame .header .title,
+.expressive-code figcaption .title,
+.expressive-code .title {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border: none !important;
+  font-size: 0.8rem !important;
+}
+
+/* Tab styling - clear text */
+.expressive-code .frame .tab,
+.expressive-code .tab {
+  background: #111 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  border: none !important;
+  font-size: 0.8rem !important;
+}
+
+.expressive-code .frame .tab.is-active,
+.expressive-code .tab.is-active {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+/* Copy button - always visible */
+.expressive-code .copy button,
+.expressive-code button.copy,
+.expressive-code [data-code] button,
+.copy-button,
+button.copy {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 4px !important;
+}
+
+.expressive-code .copy button:hover,
+.expressive-code button.copy:hover,
+.copy-button:hover,
+button.copy:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+}
+
+/* Override Expressive Code CSS variables for dark theme */
+.expressive-code,
+[data-theme="light"] .expressive-code {
+  --ec-codeBg: #0d0d0d !important;
+  --ec-codeColor: rgba(255, 255, 255, 0.88) !important;
+  --ec-brdCol: rgba(255, 255, 255, 0.08) !important;
+  --ec-frm-edBg: #0d0d0d !important;
+  --ec-frm-edActTabBg: rgba(255, 255, 255, 0.1) !important;
+  --ec-frm-edActTabIndBtmCol: #00FF88 !important;
+  --ec-frm-edTabBg: #111 !important;
+  --ec-frm-tBarBg: #111 !important;
+  --ec-frm-tBarBrdBtmCol: rgba(255, 255, 255, 0.08) !important;
 }
 
 @media (max-width: 480px) {
