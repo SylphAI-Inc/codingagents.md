@@ -4,7 +4,9 @@
 
 # CODINGAGENTS.md
 
-**The open directory for coding agents, models, SDKs, benchmarks, tools, MCPs, skills, protocols, and research.**
+**The open directory for everything coding agents.**
+
+*agents.md guides agents. codingagents.md helps humans pick the right one.*
 
 [![Visit Site](https://img.shields.io/badge/🌐_codingagents.md-live-00FF88?style=for-the-badge)](https://codingagents.md)
 [![Built with AdaL](https://img.shields.io/badge/Built_with-AdaL_CLI-blueviolet?style=for-the-badge)](https://sylph.ai)
@@ -16,7 +18,7 @@
 
 ## Why?
 
-The coding agent ecosystem is fragmenting fast. Developers need a single source of truth.
+The coding agent ecosystem is fragmenting fast. Developers need a single source of truth — for **agents, models, SDKs, benchmarks, tools, MCPs, skills, protocols, and research**.
 
 | 📊 | The Landscape |
 |----|--------------|
