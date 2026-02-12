@@ -156,9 +156,9 @@ The AI coding agent ecosystem in early 2026 consists of **10+ major agents**, **
 - **How to list**: Submit a PR to the registry repo
 - **Integration**: Built into JetBrains IDEs and Zed editor
 
-### 4.3 codingagent.md (Sylph.AI) — THIS PROJECT
+### 4.3 codingagents.md (Sylph.AI) — THIS PROJECT
 
-- **URL**: [codingagent.md](https://codingagent.md)
+- **URL**: [codingagents.md](https://codingagents.md)
 - **What it is**: The aggregator hub — covers ALL agents, formats, protocols, and registries
 - **Differentiator**: Neutral, comprehensive, content-first
 
