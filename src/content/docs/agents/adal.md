@@ -3,8 +3,8 @@ title: AdaL CLI
 description: "The self-evolving coding agent by Sylph.AI — terminal + web, MCP-native, built on AdalFlow"
 sidebar:
   badge:
-    text: Built by Us
-    variant: note
+    text: New
+    variant: tip
 ---
 
 ## Overview
@@ -12,16 +12,16 @@ sidebar:
 | | |
 |---|---|
 | **Company** | Sylph.AI |
-| **Type** | Terminal + Web agent |
-| **Pricing** | Free + Pro tier |
-| **Protocol** | MCP (Model Context Protocol) |
-| **Config Formats** | AGENTS.md |
-| **Library** | [AdalFlow](https://github.com/SylphAI-Inc/AdalFlow) |
+| **Type** | Terminal agent with CLI and Web UI |
+| **Pricing** | Free, Pro, Max, Max++ |
+| **Protocol** | Support MCPs, Skills |
+| **Config Formats** | AGENTS.md, ADAL.md |
+| **Time to Market** | 12/2025 |
 | **Website** | [sylph.ai](https://sylph.ai) |
 
 ## What It Does
 
-AdaL CLI is a self-evolving coding agent that runs in both terminal and web interfaces. Built on the AdalFlow library, it features multi-model support, MCP tool integration, skills system, and the ability to improve its own capabilities over time.
+AdaL CLI is a self-evolving coding agent that runs in both terminal and web interfaces. Built on the [AdalFlow](https://github.com/SylphAI-Inc/AdalFlow) library, it features multi-model support, MCP tool integration, skills system, and the ability to improve its own capabilities over time.
 
 ## Key Strengths
 
@@ -47,7 +47,6 @@ AdalFlow is the open-source library powering AdaL CLI:
 - Developers who want a customizable, extensible agent
 - Researchers exploring agentic AI
 - Projects that need both terminal and web access
-- Teams looking for an open-source alternative
 
 ---
 
