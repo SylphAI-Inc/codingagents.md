@@ -29,7 +29,7 @@ graph TB
         CU[Cursor]
         CP[GitHub Copilot]
         CX[OpenAI Codex]
-        GC[Gemini CLI]
+        GC[Antigravity CLI]
         DV[Devin]
         WS[Windsurf]
         AM[Amp]
@@ -201,7 +201,7 @@ graph LR
 - [ ] Launch "Submit Your Agent" feature
 - [ ] Publish first benchmark results
 - [ ] Start GitHub discussions for community contributions
-- [ ] Write 10 more agent profiles (Gemini CLI, Devin, Windsurf, Amp, etc.)
+- [ ] Write 10 more agent profiles (Antigravity CLI, Devin, Windsurf, Amp, etc.)
 
 **Month 3: Growth**
 - [ ] Launch skill/tool review system

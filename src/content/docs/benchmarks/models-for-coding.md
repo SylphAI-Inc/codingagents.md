@@ -62,7 +62,7 @@ The AI coding landscape moves fast. This page tracks which models perform best f
 - **Context window**: 1M tokens
 - **Strengths**: Remarkably strong for a "Flash" model — actually outperforms Gemini 3 Pro on coding benchmarks. Massive context window ideal for large monorepos. Excellent speed-to-quality ratio. Best value frontier model for coding.
 - **Weaknesses**: Less refined tool-use than Claude. Some reports of inconsistency on very long sessions.
-- **Best agents**: Gemini CLI, Cursor (as alternative model)
+- **Best agents**: Antigravity CLI, Cursor (as alternative model)
 - **Pricing**: ~$0.15 / $0.60 per 1M tokens (input/output)
 
 #### Gemini 3 Pro (Google)
@@ -70,7 +70,7 @@ The AI coding landscape moves fast. This page tracks which models perform best f
 - **Context window**: 1M tokens
 - **Strengths**: Strong multimodal capabilities. 1M context for massive codebases. Good at reasoning through complex problems.
 - **Weaknesses**: Surprisingly outperformed by Flash on coding. Reports of memory issues and code deletion in long sessions. [source](https://vertu.com/lifestyle/gemini-3-flash-outperforms-pro-in-coding-while-pro-suffers-critical-memory-issues/)
-- **Best agents**: Gemini CLI
+- **Best agents**: Antigravity CLI
 - **Pricing**: $1.25 / $10 per 1M tokens (input/output)
 
 #### Claude Sonnet 4.5 (Anthropic)
