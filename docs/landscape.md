@@ -26,7 +26,7 @@ The AI coding agent ecosystem in early 2026 consists of **10+ major agents**, **
 
 | Agent | Company | Type | Pricing | Protocol | Config Format | Key Strength |
 |-------|---------|------|---------|----------|--------------|-------------|
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Google | Terminal agent | Free tier | MCP | AGENTS.md | Google ecosystem, free tier |
+| [Antigravity CLI](/agents/antigravity-cli/) | Google | Terminal agent | Free tier | MCP | AGENTS.md | Google ecosystem, free tier |
 | [Windsurf](https://windsurf.com) | Cognition | IDE | $15/mo+ | Custom | AGENTS.md | Cascade flow, context engine |
 | [Amp](https://amp.dev) | Sourcegraph | Terminal + Web | Usage-based | ACP | AGENTS.md | Codebase search, ACP native |
 | [Devin](https://devin.ai) | Cognition | Autonomous agent | Enterprise | Custom | AGENTS.md | Full autonomy, browser use |
@@ -51,7 +51,7 @@ The AI coding agent ecosystem in early 2026 consists of **10+ major agents**, **
 - **Owner**: OpenAI → Agentic AI Foundation (Linux Foundation)
 - **Adoption**: 60,000+ open-source repositories
 - **Purpose**: Universal agent instructions — build commands, test workflows, coding conventions
-- **Supported by**: Claude Code, Cursor, Copilot, Codex, Gemini CLI, Devin, Windsurf, Amp, AdaL, Factory, Cline, Roo Code
+- **Supported by**: Claude Code, Cursor, Copilot, Codex, Antigravity CLI, Devin, Windsurf, Amp, AdaL, Factory, Cline, Roo Code
 - **Website**: [agents.md](https://agents.md)
 - **Spec**: Standard Markdown, no proprietary syntax
 - **Key feature**: Nested files for monorepos
@@ -111,7 +111,7 @@ The AI coding agent ecosystem in early 2026 consists of **10+ major agents**, **
 
 - **Owner**: Anthropic
 - **Purpose**: Standardized protocol for connecting AI models to external tools and data sources
-- **Adoption**: Claude Code, Cursor, Gemini CLI, AdaL CLI, Cline, Roo Code, and more
+- **Adoption**: Claude Code, Cursor, Antigravity CLI, AdaL CLI, Cline, Roo Code, and more
 - **Key feature**: Tool servers that any MCP-compatible client can use
 - **Analogy**: "USB-C for AI" — one protocol, many tools
 - **Website**: [modelcontextprotocol.io](https://modelcontextprotocol.io)
