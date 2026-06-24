@@ -12,7 +12,7 @@ description: "Google's new terminal agent in replacement of Gemini CLI"
 | **Pricing**        | Generous free tier with Gemini 3.5 Flash, Gemini 3.1 Pro, Gemini 3 Flash, Claude Sonnet 4.6, Claude Opus 4.6, and gpt-oss-120b |
 | **Protocol**       | MCP                                                                                                                            |
 | **Config Formats** | GEMINI.md, AGENTS.md                                                                                                           |
-| **GitHub**         | [google-antigravity/antigravity-cli](https://github.com/google-antigravity/antigravity-cli)                                    |
+| **Website**        | [google-antigravity/antigravity-cli](https://antigravity.google/product/antigravity-cli)                                       |
 
 ## What It Does
 
