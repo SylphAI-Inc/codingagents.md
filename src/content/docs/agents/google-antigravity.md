@@ -1,6 +1,8 @@
 ---
 title: Google Antigravity
 description: "Google's agent-first IDE — free tier, multi-model, MCP support"
+sidebar:
+  order: 7
 ---
 
 ## Overview

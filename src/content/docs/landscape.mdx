@@ -1,77 +1,203 @@
 ---
 title: Ecosystem Landscape
-description: "The complete map of AI coding agents, config formats, protocols, and registries — Feb 2026"
+description: "The complete map of AI coding agents, config formats, protocols, and registries — August 2026"
 ---
 
-import { Card, CardGrid, Tabs, TabItem } from "@astrojs/starlight/components";
 
-The AI coding agent ecosystem in early 2026 consists of **10+ major agents**, **5+ config formats**, **2 dominant protocols**, and **3+ registries**. This page maps the full landscape.
-
-## Coding Agents
-
-### Market Leaders
-
-| Agent | Company | Type | Protocol | Config Format |
-|-------|---------|------|----------|--------------|
-| [Claude Code](/agents/claude-code/) | Anthropic | Terminal | MCP | CLAUDE.md, AGENTS.md, SKILL.md |
-| [Cursor](/agents/cursor/) | Anysphere | IDE | MCP | .cursorrules, AGENTS.md |
-| [GitHub Copilot](/agents/github-copilot/) | Microsoft | IDE Plugin | Custom | copilot-instructions.md, AGENTS.md |
-| [OpenAI Codex](/agents/openai-codex/) | OpenAI | Cloud | Custom | AGENTS.md |
-
-### Strong Contenders
-
-| Agent | Company | Type | Protocol | Config Format |
-|-------|---------|------|----------|--------------|
-| [Gemini CLI](/agents/gemini-cli/) | Google | Terminal | MCP | AGENTS.md |
-| [Windsurf](/agents/windsurf/) | Cognition | IDE | Custom | AGENTS.md |
-| [Amp](/agents/amp/) | Sourcegraph | Terminal + Web | ACP | AGENTS.md |
-| [Devin](/agents/devin/) | Cognition | Autonomous | Custom | AGENTS.md |
-
-### Emerging
-
-| Agent | Company | Type | Protocol | Config Format |
-|-------|---------|------|----------|--------------|
-| [AdaL CLI](/agents/adal/) | Sylph.AI | Terminal + Web | MCP | AGENTS.md |
-| [Cline](/agents/cline/) | Community | VS Code | MCP | AGENTS.md |
-| [Aider](/agents/aider/) | Paul Gauthier | Terminal | Custom | Custom |
-
-## Config Formats
-
-| Format | Owner | Universal? | Nested? | Scripts? | Registry? |
-|--------|-------|-----------|---------|----------|----------|
-| [AGENTS.md](/formats/agents-md/) | Linux Foundation | ✅ | ✅ | ❌ | ❌ |
-| [CLAUDE.md](/formats/claude-md/) | Anthropic | ❌ | ✅ | ❌ | ❌ |
-| [.cursorrules](/formats/cursorrules/) | Cursor | ❌ | ✅ | ❌ | Community |
-| [copilot-instructions.md](/formats/copilot-instructions/) | GitHub | ❌ | ❌ | ❌ | ❌ |
-| [SKILL.md](/formats/skills/) | Vercel + Anthropic | ⚠️ | ❌ | ✅ | ✅ skills.sh |
-
-## Protocols
-
-<CardGrid>
-  <Card title="MCP — Model Context Protocol" icon="random">
-    **By Anthropic** — Connects AI models to external tools and data. The "USB-C for AI."
-
-    Adopted by: Claude Code, Cursor, Gemini CLI, AdaL CLI, Cline
-
-    [Learn more →](/protocols/mcp/)
-  </Card>
-  <Card title="ACP — Agent Client Protocol" icon="random">
-    **By Zed + JetBrains** — Connects AI agents to any editor environment.
-
-    Adopted by: Amp, JetBrains AI, Zed
-
-    [Learn more →](/protocols/acp/)
-  </Card>
-</CardGrid>
-
-## Registries & Directories
-
-| Registry | Owner | What It Lists | Scale |
-|----------|-------|--------------|-------|
-| [skills.sh](https://skills.sh) | Vercel | Reusable agent skills | 35K+ installs |
-| [ACP Registry](https://zed.dev/acp) | Zed / JetBrains | ACP-compatible agents | Growing |
-| **codingagent.md** | Sylph.AI | Everything | You're here! |
+**Last Updated**: 2026-08-14
+**Managed by** [SylphAI](https://adalagent.ai/?utm_source=codingagents.md&utm_medium=referral&utm_campaign=landscape_header) · **Built with** [AdaL CLI](https://adalagent.ai/?utm_source=codingagents.md&utm_medium=referral&utm_campaign=landscape_header)
 
 ---
 
-*Last updated: Feb 2026 · [Edit this page](https://github.com/SylphAI-Inc/codingagents.md/edit/main/src/content/docs/landscape.mdx)*
+## TL;DR
+
+By August 2026 the ecosystem covers **23 profiled agents**, **5+ config formats**, **3 protocols** (MCP, ACP, and [@skills](/protocols/atskills/)), and a growing set of skill catalogues. This document maps it.
+
+Three things changed over the first half of 2026. Agents moved from the editor to the terminal and then off the machine entirely, into cloud runners and messaging platforms. Governance shifted: MCP, AGENTS.md, and [Goose](/agents/goose/) now sit under the Linux Foundation's Agentic AI Foundation rather than with their original vendors. And skills became the third layer of the stack, after tools and project context.
+
+---
+
+## 1. Coding Agents
+
+Every agent below has its own profile — follow the name for pricing, trade-offs, and setup.
+
+| Agent | Maintainer | Type | Pricing | Protocol | Key Strength |
+|-------|-----------|------|---------|----------|-------------|
+| [AdaL CLI](/agents/adal/) | SylphAI | Terminal + Desktop + Web | Free + Pro/Max | MCP, @skills | Worker agents, native @skills |
+| [Claude Code](/agents/claude-code/) | Anthropic | Terminal + IDE ext | Usage-based | MCP | Deep reasoning, agentic coding |
+| [Codex](/agents/openai-codex/) | OpenAI | CLI + Desktop + Cloud | Subscription or API | MCP | Cloud sandboxing, parallel tasks |
+| [Cursor](/agents/cursor/) | Anysphere | IDE + CLI | $20/mo+ | MCP | IDE integration, composer |
+| [GitHub Copilot](/agents/github-copilot/) | GitHub | IDE plugin + agent | $10–39/mo | MCP | GitHub ecosystem, ubiquity |
+| [Gemini CLI](/agents/gemini-cli/) | Google | Terminal | Free tier | MCP | Google ecosystem, free tier |
+| [Antigravity](/agents/google-antigravity/) | Google | Agent-first IDE | Free tier / Pro | MCP, Skills | Multi-agent orchestration |
+| [Windsurf](/agents/windsurf/) | Cognition | IDE | $15/mo+ | Custom | Cascade flow, context engine |
+| [Devin](/agents/devin/) | Cognition | Cloud agent | Enterprise | Custom | Full autonomy, browser use |
+| [Amp](/agents/amp/) | Sourcegraph | Terminal + IDE ext | Usage-based | ACP | Codebase search, ACP native |
+| [Cline](/agents/cline/) | Cline | VS Code ext | Free (OSS) | MCP | Open source, explicit approvals |
+| [OpenCode](/agents/opencode/) | SST | Terminal TUI | Free (BYOK) | MCP | Provider-agnostic harness |
+| [Pi](/agents/pi/) | earendil-works | Terminal | Free (BYOK) | MCP | Minimal system prompt |
+| [Hermes](/agents/hermes/) | Nous Research | Terminal + messaging | Free (OSS) | MCP, ACP | Self-improving, writes its own skills |
+| [OpenClaw](/agents/openclaw/) | OpenClaw Foundation | Daemon + messaging | Free (OSS) | MCP | 29 messaging channels, local |
+| [Droid](/agents/droid/) | Factory | Terminal + IDE | Commercial | MCP | Terminal-Bench leader, specialized droids |
+| [Kiro](/agents/kiro/) | AWS | CLI + IDE | Commercial | MCP | Spec-driven development |
+| [Goose](/agents/goose/) | Agentic AI Foundation | Terminal + desktop | Free (OSS) | MCP | Neutral governance, MCP proving ground |
+| [Kilo Code](/agents/kilo-code/) | Kilo | IDE ext + CLI | Free (BYOK) | MCP | 500+ models, zero-markup BYOK |
+| [Qoder](/agents/qoder/) | Alibaba | IDE + JetBrains + CLI | Free tier | MCP | Quest workflows, persistent repo knowledge |
+| [Trae](/agents/trae/) | ByteDance | AI-native IDE | Free tier | MCP | 6M+ users, open CLI agent |
+| [Freebuff](/agents/freebuff/) | Codebuff | Terminal + web | Free (ad-funded) | — | Free with no API key |
+| [Roo Code](/agents/roo-code/) | Roo Code Inc | VS Code ext | **Archived May 2026** | MCP | Superseded by Kilo Code |
+
+Also in the field, not yet profiled: Aider, Continue, OpenHands, Warp, Jules, Zed, Crush, Plandex, Qwen Code, Kimi CLI, and Amazon Q Developer CLI.
+
+---
+
+## 2. Configuration Formats
+
+### 2.1 AGENTS.md (Universal Standard)
+
+- **Owner**: OpenAI → Agentic AI Foundation (Linux Foundation)
+- **Adoption**: 60,000+ open-source repositories
+- **Purpose**: Universal agent instructions — build commands, test workflows, coding conventions
+- **Supported by**: Claude Code, Cursor, Copilot, Codex, Gemini CLI, Devin, Windsurf, Amp, AdaL, Factory, Cline, Roo Code
+- **Website**: [agents.md](https://agents.md)
+- **Spec**: Standard Markdown, no proprietary syntax
+- **Key feature**: Nested files for monorepos
+
+### 2.2 CLAUDE.md (Anthropic)
+
+- **Owner**: Anthropic
+- **Purpose**: Claude Code-specific project memory and instructions
+- **Supported by**: Claude Code exclusively
+- **Location**: Project root, `~/.claude/CLAUDE.md` (global), or nested
+- **Key feature**: Hierarchical — global + project + directory level
+- **Relationship to AGENTS.md**: Claude Code reads both; CLAUDE.md takes precedence for Claude-specific instructions
+
+### 2.3 .cursorrules / Rules (Cursor)
+
+- **Owner**: Anysphere (Cursor)
+- **Purpose**: Cursor-specific coding rules and preferences
+- **Supported by**: Cursor exclusively
+- **Location**: `.cursorrules` file or `.cursor/rules/` directory
+- **Key feature**: Project Rules, User Rules, Team Rules hierarchy
+- **Relationship to AGENTS.md**: Cursor now also reads AGENTS.md
+
+### 2.4 copilot-instructions.md (GitHub)
+
+- **Owner**: Microsoft / GitHub
+- **Purpose**: Copilot custom instructions
+- **Supported by**: Copilot
+- **Location**: `.github/copilot-instructions.md`
+- **Key feature**: Integrated with GitHub repository settings
+- **Relationship to AGENTS.md**: Copilot also reads AGENTS.md
+
+### 2.5 SKILL.md / Skills Format (Vercel + Claude)
+
+- **Owner**: Vercel (skills.sh), Anthropic (Claude skills)
+- **Purpose**: Reusable agent capabilities — packaged instructions + scripts
+- **Supported by**: Claude Code, Cursor, Copilot, Gemini, and others via skills.sh
+- **Location**: `.claude/skills/` (Claude) or installed via `npx skills add`
+- **Registry**: [skills.sh](https://skills.sh) — 35,000+ installs
+- **Key feature**: NPM-like install, leaderboard, cross-agent compatibility
+
+### Format Comparison Matrix
+
+| Feature | AGENTS.md | CLAUDE.md | .cursorrules | copilot-instructions.md | SKILL.md |
+|---------|-----------|-----------|-------------|------------------------|----------|
+| Universal | ✅ | ❌ Claude only | ❌ Cursor only | ❌ Copilot only | ⚠️ Multi-agent |
+| Nested/hierarchical | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Includes scripts | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Registry | ❌ | ❌ | Community (GitHub) | ❌ | ✅ skills.sh |
+| Foundation-backed | ✅ Linux Foundation | ❌ | ❌ | ❌ | ❌ |
+| Standard Markdown | ✅ | ✅ | ✅ | ✅ | ✅ + YAML |
+
+---
+
+## 3. Protocols
+
+### 3.1 MCP — Model Context Protocol
+
+- **Owner**: Anthropic
+- **Purpose**: Standardized protocol for connecting AI models to external tools and data sources
+- **Adoption**: Claude Code, Cursor, Gemini CLI, AdaL CLI, Cline, Roo Code, and more
+- **Key feature**: Tool servers that any MCP-compatible client can use
+- **Analogy**: "USB-C for AI" — one protocol, many tools
+- **Website**: [modelcontextprotocol.io](https://modelcontextprotocol.io)
+
+### 3.2 ACP — Agent Client Protocol
+
+- **Owner**: Zed Industries + JetBrains
+- **Purpose**: Open standard for AI coding agents to integrate with any editor
+- **Adoption**: Amp, JetBrains AI, Zed, growing ecosystem
+- **Key feature**: Agent Registry — register once, available everywhere
+- **Registry**: [ACP Registry](https://zed.dev/acp)
+- **Website**: [zed.dev/acp](https://zed.dev/acp)
+
+### Protocol Comparison
+
+| Feature | MCP | ACP |
+|---------|-----|-----|
+| Focus | Model ↔ Tool connection | Agent ↔ Editor connection |
+| Initiated by | Anthropic | Zed + JetBrains |
+| Registry | Community MCP servers | Official ACP Registry |
+| Primary adopters | Claude, Cursor, Gemini | Amp, JetBrains, Zed |
+| Open source | ✅ | ✅ |
+| Complementary? | ✅ They solve different problems | ✅ |
+
+---
+
+## 4. Registries & Directories
+
+### 4.1 skills.sh (Vercel)
+
+- **URL**: [skills.sh](https://skills.sh)
+- **What it is**: NPM-like directory for AI agent skills
+- **Scale**: 35,000+ total installs, 200+ skills listed
+- **Install**: `npx skills add <owner/repo>`
+- **Features**: Leaderboard (all-time, trending, hot), cross-agent compatibility
+- **Top skills**: vercel-react-best-practices (72K installs), seo-audit, marketing-strategy
+
+### 4.2 ACP Registry (Zed/JetBrains)
+
+- **URL**: [zed.dev/acp](https://zed.dev/acp) + [registry.coder.com](https://registry.coder.com)
+- **What it is**: Directory of ACP-compatible coding agents
+- **How to list**: Submit a PR to the registry repo
+- **Integration**: Built into JetBrains IDEs and Zed editor
+
+### 4.3 codingagents.md (SylphAI) — THIS PROJECT
+
+- **URL**: [codingagents.md](https://codingagents.md)
+- **What it is**: The aggregator hub — covers ALL agents, formats, protocols, and registries
+- **Differentiator**: Neutral, comprehensive, content-first
+
+---
+
+## 5. Ecosystem Trends (Feb 2026)
+
+### 5.1 Convergence on AGENTS.md
+Nearly every agent now reads AGENTS.md files. The format has become the de facto standard for project-level agent instructions, with 60K+ repos adopting it. Agent-specific formats (CLAUDE.md, .cursorrules) continue to exist for fine-tuning but AGENTS.md provides the universal baseline.
+
+### 5.2 Skills as the New Packages
+Vercel's skills.sh has established the pattern of "npm for agents" — reusable, installable capabilities. Claude Code's native `.claude/skills/` directory follows the same pattern. Expect skills to become as fundamental as npm packages.
+
+### 5.3 Protocol Coexistence
+MCP and ACP solve different problems and are complementary. MCP connects models to tools; ACP connects agents to editors. Most agents will support both.
+
+### 5.4 Autonomous Agents Rising
+Devin, Factory.ai, and OpenAI Codex are pushing toward fully autonomous coding — agents that can work independently for hours. This shifts the paradigm from "AI-assisted coding" to "AI coding with human review."
+
+### 5.5 Multi-Agent Workflows
+57% of companies now run AI agents in production. The next frontier is orchestrating multiple agents — e.g., one for planning, one for coding, one for testing. codingagent.md will document these emerging patterns.
+
+---
+
+## Contributing
+
+This landscape is community-maintained. To add or update an agent, format, or protocol:
+
+1. Fork the [codingagent.md repo](https://github.com/SylphAI-Inc/coding_agent)
+2. Edit the relevant file in `docs/`
+3. Submit a Pull Request
+
+---
+
+*Managed by [SylphAI](https://adalagent.ai/?utm_source=codingagents.md&utm_medium=referral&utm_campaign=landscape_footer) · Built with [AdaL CLI](https://adalagent.ai/?utm_source=codingagents.md&utm_medium=referral&utm_campaign=landscape_footer)*

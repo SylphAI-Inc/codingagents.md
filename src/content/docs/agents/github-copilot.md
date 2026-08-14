@@ -1,6 +1,8 @@
 ---
 title: GitHub Copilot
 description: "Microsoft's AI coding assistant — IDE plugin, agent mode, deep GitHub integration"
+sidebar:
+  order: 5
 ---
 
 ## Overview

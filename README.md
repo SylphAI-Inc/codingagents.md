@@ -9,7 +9,7 @@
 *agents.md guides agents. codingagents.md helps humans pick the right one.*
 
 [![Visit Site](https://img.shields.io/badge/🌐_codingagents.md-live-00FF88?style=for-the-badge)](https://codingagents.md)
-[![Built with AdaL](https://img.shields.io/badge/Built_with-AdaL_CLI-blueviolet?style=for-the-badge)](https://sylph.ai)
+[![Built with AdaL](https://img.shields.io/badge/Built_with-AdaL_CLI-blueviolet?style=for-the-badge)](https://adalagent.ai/?utm_source=codingagents.md&utm_medium=referral&utm_campaign=readme_badge)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 </div>

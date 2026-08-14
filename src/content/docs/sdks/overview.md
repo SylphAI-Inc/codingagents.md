@@ -11,7 +11,7 @@ These SDKs are specifically built for **software engineering agents** — they u
 
 | SDK | By | Focus | Powers |
 |-----|----|-------|--------|
-| [**AdalFlow**](/sdks/adalflow/) | Sylph.AI | Self-evolving agents, auto-optimization | AdaL CLI |
+| [**AdalFlow**](/sdks/adalflow/) | SylphAI | Self-evolving agents, auto-optimization | AdaL CLI |
 | [**OpenHands SDK**](/sdks/openhands/) | OpenHands | Cloud coding agent platform | OpenHands (formerly OpenDevin) |
 | [**SWE-agent**](/sdks/swe-agent/) | Princeton NLP | Autonomous issue fixing | SWE-bench SOTA |
 | [**Aider**](/sdks/aider/) | Paul Gauthier | Terminal pair programming | Aider CLI |

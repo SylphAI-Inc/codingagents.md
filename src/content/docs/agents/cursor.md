@@ -2,6 +2,7 @@
 title: Cursor
 description: "The AI-first IDE with composer, agent mode, and deep codebase understanding"
 sidebar:
+  order: 4
   badge:
     text: Popular
     variant: tip

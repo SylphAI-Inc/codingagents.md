@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import sitemap from "@astrojs/sitemap";
 
 import react from "@astrojs/react";
 
@@ -148,7 +149,7 @@ export default defineConfig({
       // Logo click handler
       {
         tag: "script",
-        content: `document.addEventListener('DOMContentLoaded',()=>{const img=document.querySelector('.site-title img');if(img){img.style.cursor='pointer';img.addEventListener('click',(e)=>{e.preventDefault();e.stopPropagation();window.open('https://sylph.ai','_blank');});}});`,
+        content: `document.addEventListener('DOMContentLoaded',()=>{const img=document.querySelector('.site-title img');if(img){img.style.cursor='pointer';img.addEventListener('click',(e)=>{e.preventDefault();e.stopPropagation();window.open('https://adalagent.ai/?utm_source=codingagents.md&utm_medium=referral&utm_campaign=site_logo','_blank');});}});`,
       },
     ],
     sidebar: [
@@ -159,17 +160,22 @@ export default defineConfig({
           { label: "Ecosystem Landscape", slug: "landscape" },
         ],
       },
+      // Protocols and formats sit ABOVE the agent list on purpose. The agent
+      // directory grows without bound — every new agent adds a row — and when
+      // it was first in the sidebar it pushed everything else below the fold.
+      // These two sections are short, finite, and the pages most readers want
+      // second, so they stay reachable no matter how long the agent list gets.
       {
-        label: "Coding Agents",
-        autogenerate: { directory: "agents" },
+        label: "Protocols",
+        autogenerate: { directory: "protocols" },
       },
       {
         label: "Config Formats",
         autogenerate: { directory: "formats" },
       },
       {
-        label: "Protocols",
-        autogenerate: { directory: "protocols" },
+        label: "Coding Agents",
+        autogenerate: { directory: "agents" },
       },
       {
         label: "Guides",
@@ -189,5 +195,10 @@ export default defineConfig({
         "https://github.com/SylphAI-Inc/codingagents.md/edit/main/",
     },
     lastUpdated: true,
-  }), react()],
+  }),
+  // robots.txt has advertised /sitemap-index.xml since the site launched, but
+  // nothing generated it — the URL 404'd, so every crawler that followed the
+  // directive found nothing and fell back to link discovery alone.
+  sitemap(),
+  react()],
 });

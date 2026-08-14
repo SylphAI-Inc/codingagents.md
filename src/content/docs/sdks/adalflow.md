@@ -5,7 +5,7 @@ description: "The open-source library powering AdaL CLI — auto-differentiable 
 
 | Field | Value |
 |-------|-------|
-| **Developer** | [Sylph.AI](https://sylph.ai) |
+| **Developer** | [SylphAI](https://adalagent.ai/?utm_source=codingagents.md&utm_medium=referral&utm_campaign=sdk_adalflow) |
 | **Language** | Python |
 | **License** | MIT |
 | **GitHub** | [SylphAI-Inc/AdalFlow](https://github.com/SylphAI-Inc/AdalFlow) |

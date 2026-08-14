@@ -1,4 +1,6 @@
 ---
+import { adalUrl } from "../constants";
+
 // Logo size constant - change this to resize all logos uniformly
 const LOGO_BASE_SIZE = 100; // pixels
 
@@ -8,7 +10,7 @@ const agents = [
   { name: "Goose", logo: "/logos/goose.svg", url: "https://block.github.io/goose" },
   { name: "Cursor", logo: "/logos/cursor.svg", url: "https://cursor.sh/" },
   { name: "Claude Code", logo: "/logos/claude-code.svg", url: "https://claude.com/product/claude-code" },
-  { name: "AdaL CLI", logo: "/logos/adal.svg", url: "https://sylph.ai" },
+  { name: "AdaL CLI", logo: "/logos/adal.svg", url: adalUrl("logo_marquee") },
   { name: "Codex", logo: "/logos/codex.svg", url: "https://openai.com/codex" },
   { name: "GitHub Copilot", logo: "/logos/copilot.svg", url: "https://github.com/features/copilot" },
   { name: "Gemini", logo: "/logos/gemini.svg", url: "https://gemini.google.com/" },
