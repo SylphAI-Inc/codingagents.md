@@ -1,6 +1,8 @@
 ---
 title: "CLAUDE.md"
 description: "Anthropic's project config format for Claude Code — persistent memory and instructions"
+sidebar:
+  order: 2
 ---
 
 ## What is CLAUDE.md?

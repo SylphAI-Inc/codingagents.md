@@ -1,10 +1,11 @@
 ---
 // Custom footer with Discord link
+import { adalUrl } from "../constants";
 ---
 
 <footer class="custom-footer">
   <div class="footer-content">
-    <span>Built with <a href="https://sylph.ai">AdaL CLI</a></span>
+    <span>Built with <a href={adalUrl("footer")}>AdaL CLI</a></span>
     <span class="divider">·</span>
     <a href="https://discord.com/invite/ezzszrRZvT" class="discord-link">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">

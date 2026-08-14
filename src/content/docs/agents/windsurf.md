@@ -1,6 +1,8 @@
 ---
 title: Windsurf
 description: "AI-powered IDE with Cascade — deep context awareness and agentic flows"
+sidebar:
+  order: 8
 ---
 
 ## Overview

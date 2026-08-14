@@ -1,6 +1,8 @@
 ---
 title: Cline
 description: "Open-source VS Code extension — autonomous coding agent with MCP support"
+sidebar:
+  order: 11
 ---
 
 ## Overview

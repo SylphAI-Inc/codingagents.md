@@ -1,6 +1,8 @@
 ---
 title: "copilot-instructions.md"
 description: "GitHub Copilot's custom instruction format for project-specific AI guidance"
+sidebar:
+  order: 4
 ---
 
 ## What is copilot-instructions.md?

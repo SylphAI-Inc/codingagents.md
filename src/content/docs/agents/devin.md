@@ -1,6 +1,8 @@
 ---
 title: Devin
 description: "Cognition's fully autonomous AI coding agent — browser, terminal, full dev environment"
+sidebar:
+  order: 9
 ---
 
 ## Overview

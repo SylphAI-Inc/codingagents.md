@@ -1,16 +1,15 @@
 ---
 title: Best Models for Coding (2026)
-description: A living comparison of the best LLMs for coding tasks — updated weekly with benchmark scores, strengths, and real-world performance.
+description: "Which LLM to use for coding in 2026 — current frontier models compared by release date, context window, price, and what each is actually good at."
 sidebar:
   order: 1
-  badge:
-    text: Updated Weekly
-    variant: success
 ---
 
-The AI coding landscape moves fast. This page tracks which models perform best for different coding tasks, based on public benchmarks, community reports, and our own testing.
+Which model should you point your coding agent at? This page tracks the current frontier, what each model costs, and what it is actually good for.
 
-> **Last updated**: February 7, 2026
+Context windows and pricing come from a live production model catalogue, so they are what you pay rather than what a launch post claimed. Release dates come from vendor announcements.
+
+> **Last updated**: August 14, 2026
 
 ---
 
@@ -18,165 +17,139 @@ The AI coding landscape moves fast. This page tracks which models perform best f
 
 | Use Case | Best Model | Runner-Up |
 |----------|-----------|-----------|
-| Complex multi-file refactors | Claude Opus 4.6 | GPT-5.2-Codex |
-| Quick edits & code review | Claude Sonnet 4.5 | GPT-5.2 |
-| Large codebase understanding | Gemini 3 Pro | Claude Opus 4.6 |
-| Agentic workflows (tool use) | Claude Opus 4.6 | GPT-5.2-Codex |
-| Speed-optimized coding | Gemini 3 Flash | Claude Sonnet 4.5 |
-| Budget-friendly coding | DeepSeek V3 | Qwen 2.5 Coder 32B |
-| Local / privacy-first | Qwen 2.5 Coder 32B | DeepSeek Coder V2 |
+| Complex agentic coding | Claude Opus 5 | GPT-5.6 Sol |
+| Everyday development | Claude Sonnet 5 | GPT-5.6 Terra |
+| Coding on a Flash budget | Gemini 3.7 Flash | MiniMax M3 |
+| Hardest professional work | GPT-5.6 Sol | Claude Fable 5 |
+| Long-horizon coding | GLM-5.2 | Kimi K3 |
+| High-volume, cost-sensitive | GPT-5.6 Luna | DeepSeek V4 Flash |
+| Browser-use agents | MiniMax M3 | Gemini 3.7 Flash |
+| Best value at the frontier | DeepSeek V4 Pro | GLM-5.2 |
 
 ---
 
-## Detailed Model Rankings
+## The Current Frontier
 
-### Tier 1: Frontier Models
+Newest first. Prices are per 1M tokens, input / output.
 
-#### Claude Opus 4.6 (Anthropic)
-- **SWE-bench Verified**: 80.8% · [source](https://www.anthropic.com/news/claude-opus-4-6)
-- **Context window**: 200K tokens
-- **Strengths**: Near-identical to Opus 4.5 on SWE-bench while improving on reasoning and instruction following. Top-tier for agentic coding — multi-file refactors, debugging complex race conditions, and working with CLAUDE.md / AGENTS.md configurations. Strong extended thinking capabilities for hard architectural problems.
-- **Weaknesses**: Slightly lower SWE-bench than Opus 4.5 (80.8% vs 80.9%). Expensive. Can be overkill for simple tasks.
-- **Best agents**: Claude Code, AdaL CLI, Amp, Cline
-- **Pricing**: $15 / $75 per 1M tokens (input/output)
+| Model | Provider | Released | Context | Price | Positioning |
+|-------|----------|----------|---------|-------|-------------|
+| Gemini 3.7 Flash | Google | 2026-08-13 | 1M | $1.50 / $7.50 | Most capable Flash for coding and agentic workflows |
+| Claude Opus 5 | Anthropic | 2026-07-24 | 1M | $5 / $25 | Most capable Anthropic, complex agentic coding |
+| GPT-5.6 Sol | OpenAI | 2026-07-09 | 922K | $5 / $30 | Frontier, complex professional work |
+| GPT-5.6 Terra | OpenAI | 2026-07-09 | 922K | $2.50 / $15 | Balances intelligence and cost |
+| GPT-5.6 Luna | OpenAI | 2026-07-09 | 922K | $1 / $6 | Cost-sensitive high-volume workloads |
+| Claude Sonnet 5 | Anthropic | 2026-06-30 | 1M | $3 / $15 | Most capable Sonnet, coding and agents |
 
-#### GPT-5.2-Codex (OpenAI)
-- **SWE-bench Verified**: 80.0% · [source](https://openai.com/index/introducing-gpt-5-2-codex/)
-- **SWE-bench Pro**: State-of-the-art · **Terminal-Bench 2.0**: State-of-the-art
-- **Context window**: 128K tokens (with context compaction)
-- **Strengths**: Optimized specifically for agentic coding workflows. Leads on SWE-Bench Pro and Terminal-Bench 2.0 — benchmarks designed for real-world agentic performance. Strong long-horizon task completion with context compaction for extended sessions.
-- **Weaknesses**: Smaller base context than Claude/Gemini. Codex-specific model requires separate API access.
-- **Best agents**: OpenAI Codex, GitHub Copilot
-- **Pricing**: $2 / $8 per 1M tokens (input/output) · [source](https://openai.com/index/introducing-gpt-5-2/)
-
-#### Claude Opus 4.5 (Anthropic)
-- **SWE-bench Verified**: 80.9%
-- **Context window**: 200K tokens
-- **Strengths**: Highest raw SWE-bench score of any model. Deep reasoning, excellent at complex architectural decisions and legacy code understanding.
-- **Weaknesses**: Being superseded by 4.6 in practice. Very expensive.
-- **Best agents**: Claude Code, AdaL CLI
-- **Pricing**: $15 / $75 per 1M tokens (input/output)
-
-#### Gemini 3 Flash (Google)
-- **SWE-bench Verified**: 78.0% · [source](https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/)
-- **Context window**: 1M tokens
-- **Strengths**: Remarkably strong for a "Flash" model — actually outperforms Gemini 3 Pro on coding benchmarks. Massive context window ideal for large monorepos. Excellent speed-to-quality ratio. Best value frontier model for coding.
-- **Weaknesses**: Less refined tool-use than Claude. Some reports of inconsistency on very long sessions.
-- **Best agents**: Gemini CLI, Cursor (as alternative model)
-- **Pricing**: ~$0.15 / $0.60 per 1M tokens (input/output)
-
-#### Gemini 3 Pro (Google)
-- **SWE-bench Verified**: ~75% · [source](https://www.vellum.ai/blog/google-gemini-3-benchmarks)
-- **Context window**: 1M tokens
-- **Strengths**: Strong multimodal capabilities. 1M context for massive codebases. Good at reasoning through complex problems.
-- **Weaknesses**: Surprisingly outperformed by Flash on coding. Reports of memory issues and code deletion in long sessions. [source](https://vertu.com/lifestyle/gemini-3-flash-outperforms-pro-in-coding-while-pro-suffers-critical-memory-issues/)
-- **Best agents**: Gemini CLI
-- **Pricing**: $1.25 / $10 per 1M tokens (input/output)
-
-#### Claude Sonnet 4.5 (Anthropic)
-- **SWE-bench Verified**: 77.2%
-- **Context window**: 200K tokens
-- **Strengths**: Best balance of quality and cost in the Claude family. Strong at agentic coding without the Opus price tag. Excellent for day-to-day development workflows.
-- **Weaknesses**: Gap to Opus on the hardest problems.
-- **Best agents**: Claude Code, AdaL CLI, Amp, Cline
-- **Pricing**: $3 / $15 per 1M tokens (input/output)
+Anthropic versions each tier separately, so the 5 generation arrived in pieces rather than at one launch. OpenAI shipped GPT-5.6 as three models at once — Luna, Terra, and Sol, least to most capable.
 
 ---
 
-### Tier 2: Previous Generation (Still Strong)
+## By Provider
 
-#### GPT-5.2 (OpenAI)
-- **SWE-bench Verified**: 80.0% · [source](https://openai.com/index/introducing-gpt-5-2/)
-- **Context window**: 128K tokens
-- **Strengths**: Significant improvements in general intelligence, long-context understanding, and agentic tool-calling over GPT-5. Strong vision capabilities.
-- **Weaknesses**: Codex variant is better for pure coding tasks.
-- **Best agents**: GitHub Copilot, Cursor
-- **Pricing**: $2 / $8 per 1M tokens (input/output)
+### Anthropic
 
-#### Claude Sonnet 4 (Anthropic)
-- **SWE-bench Verified**: 72.7%
-- **Context window**: 200K tokens
-- **Strengths**: Still very capable. Well-tested across many agent frameworks. Good instruction following.
-- **Weaknesses**: Superseded by Sonnet 4.5 on all benchmarks.
-- **Best agents**: Claude Code, AdaL CLI, Cline
-- **Pricing**: $3 / $15 per 1M tokens (input/output)
+| Model | Context | Price | Notes |
+|-------|---------|-------|-------|
+| Claude Opus 5 | 1M | $5 / $25 | Most capable Anthropic for complex agentic coding |
+| Claude Fable 5 | 1M | $10 / $50 | Next-gen flagship, knowledge work and coding |
+| Claude Sonnet 5 | 1M | $3 / $15 | The default choice for day-to-day work |
+| Claude Sonnet 4.6 | 1M | $3 / $15 | Proven all-rounder |
+| Claude Opus 4.6 | 1M | $5 / $25 | Deep reasoning and production code |
 
-#### GPT-4.1 (OpenAI)
-- **SWE-bench Verified**: 54.6%
-- **Context window**: 128K tokens
-- **Strengths**: Fast, clean code generation. Strong instruction following and coding style adherence.
-- **Weaknesses**: Significantly behind current frontier on agentic tasks.
-- **Best agents**: GitHub Copilot, Cursor
-- **Pricing**: $2 / $8 per 1M tokens (input/output)
+### OpenAI
+
+| Model | Context | Price | Notes |
+|-------|---------|-------|-------|
+| GPT-5.6 Sol | 922K | $5 / $30 | The hardest work |
+| GPT-5.6 Terra | 922K | $2.50 / $15 | Balanced everyday work |
+| GPT-5.6 Luna | 922K | $1 / $6 | Fast and cheap at volume |
+
+### Google
+
+| Model | Context | Price | Notes |
+|-------|---------|-------|-------|
+| Gemini 3.7 Flash | 1M | $1.50 / $7.50 | Coding and agentic workflows |
+| Gemini 3.1 Pro | 1M | $2 / $12 | Best multimodal understanding |
+| Gemini 3.6 Flash | 1M | $1.50 / $7.50 | Fast multimodal, large output budget |
+| Gemini 3 Flash | 1M | $0.50 / $3 | Fast everyday multimodal |
+
+### Open-weight and challenger models
+
+| Model | Provider | Context | Price | Notes |
+|-------|----------|---------|-------|-------|
+| Kimi K3 | Moonshot | 917K | $3 / $15 | Frontier coding, deep reasoning |
+| Kimi K2.7 Code | Moonshot | 214K | $0.95 / $4 | Coding and agentic, multimodal |
+| GLM-5.2 | Z.ai | 1M | $1.40 / $4.40 | Flagship, long-horizon coding |
+| GLM-5.1 | Z.ai | 200K | $1.40 / $4.40 | Previous-gen flagship |
+| DeepSeek V4 Pro | DeepSeek | 616K | $0.44 / $0.87 | Frontier reasoning, remarkable value |
+| DeepSeek V4 Flash | DeepSeek | 616K | $0.14 / $0.28 | Fast reasoning, cheapest on this page |
+| Grok 4.6 | xAI | 500K | $2 / $6 | Strong agentic coding |
+| MiniMax M3 | MiniMax | 1M | $0.30 / $1.20 | Good with browser use |
+| MiniMax M2.7 | MiniMax | 200K | $0.30 / $1.20 | Lightweight agentic coding |
+| Muse Spark 1.2 | Meta | 1M | $1.25 / $4.25 | Fast agentic coding |
+| Qwen3.8 Max | Qwen | 991K | $2 / $6 | Multimodal long-context |
+| Qwen3.7 Plus | Qwen | 991K | $0.80 / $3.20 | Balanced multimodal |
 
 ---
 
-### Tier 3: Open-Source & Local
+## A Note on Benchmark Scores
 
-#### DeepSeek V3 (DeepSeek)
-- **SWE-bench Verified**: 42.0%
-- **Context window**: 128K tokens
-- **Strengths**: Exceptional value. Open-weight with strong Python and web framework support.
-- **Weaknesses**: Weaker on less common languages. Agentic tool-use less reliable.
-- **Pricing**: $0.27 / $1.10 per 1M tokens (input/output)
+This page used to carry SWE-bench Verified percentages. It no longer does, and the reason is worth stating.
 
-#### Qwen 2.5 Coder 32B (Alibaba)
-- **HumanEval**: 65.9%
-- **Context window**: 128K tokens
-- **Strengths**: Best open-source coding model. Runs on consumer hardware (~20GB VRAM).
-- **Weaknesses**: Weaker at multi-step reasoning.
-- **Best for**: Local development, privacy-sensitive environments
+The scores that were here were real, but they described Opus 4.6, GPT-5.2-Codex, and Gemini 3 Flash — models that are now one or two generations behind. None of the models at the top of this page has a verified SWE-bench number we can cite, and publishing an unverified figure next to a verified one makes both worthless.
 
----
+A stale number is worse than no number, because it looks current. We would rather tell you what a model costs, how much context it holds, and what its maker built it for — all of which we can check — than fill a column with figures we cannot stand behind.
 
-## Benchmark Explainer
+When verified scores for the current frontier are published, they will go back in with sources attached.
+
+### What the benchmarks measure
 
 | Benchmark | What It Measures | Why It Matters |
 |-----------|-----------------|----------------|
-| **SWE-bench Verified** | Fix real GitHub issues end-to-end | Most realistic agentic coding measure |
-| **SWE-bench Pro** | Harder subset of real-world issues | Tests frontier agent capability |
-| **Terminal-Bench 2.0** | Agentic terminal-based coding tasks | Tests real development workflows |
+| **SWE-bench Verified** | Fix real GitHub issues end-to-end | The most realistic agentic coding measure |
+| **SWE-bench Pro** | A harder subset of real-world issues | Tests frontier agent capability |
+| **Terminal-Bench 2.0** | Agentic terminal tasks | Tests real development workflows |
 | **Aider Polyglot** | Multi-language code editing accuracy | Tests edit-apply workflows |
-| **HumanEval** | Function-level code generation | Classic but limited |
 | **LiveCodeBench Pro** | Competitive programming | Tests algorithmic reasoning |
+| **HumanEval** | Function-level code generation | Classic, and now largely saturated |
 
-> **Our recommendation**: Focus on **SWE-bench Verified** for agentic use cases and **Terminal-Bench 2.0** for real-world development workflows.
+For agentic work, SWE-bench Verified and Terminal-Bench 2.0 are the two worth watching. HumanEval no longer separates frontier models from each other.
 
 ---
 
-## Choosing the Right Model
+## Choosing a Model
 
 ```
-Need the absolute best for hard problems?
-  → Claude Opus 4.6 (80.8% SWE-bench)
+Hardest agentic work, cost secondary?
+  → Claude Opus 5 or GPT-5.6 Sol
 
-Need strong agentic coding on a budget?
-  → Gemini 3 Flash (78% SWE-bench, cheapest frontier)
+Everyday development, best balance?
+  → Claude Sonnet 5 ($3/$15, 1M context)
 
-Need OpenAI ecosystem?
-  → GPT-5.2-Codex (SOTA on Terminal-Bench)
+Cheap but genuinely capable?
+  → DeepSeek V4 Pro ($0.44/$0.87) or GLM-5.2 ($1.40/$4.40)
 
-Working with a massive codebase?
-  → Gemini 3 Flash/Pro (1M context)
+Enormous codebase in one session?
+  → Anything at 1M — Sonnet 5, Opus 5, Gemini 3.7 Flash, GLM-5.2
 
-Good balance of quality and cost?
-  → Claude Sonnet 4.5 (77.2% SWE-bench)
+Running an agent at high volume?
+  → GPT-5.6 Luna or DeepSeek V4 Flash
 
-On a tight budget?
-  → DeepSeek V3 (API) or Qwen 2.5 Coder (local)
+Driving a browser?
+  → MiniMax M3
 ```
 
----
-
-## How We Update This Page
-
-1. **Weekly benchmark scan**: We check SWE-bench, Aider, Terminal-Bench, and LiveCodeBench leaderboards every Saturday
-2. **Community reports**: We aggregate feedback from r/ClaudeAI, r/ChatGPTCoding, r/GoogleGeminiAI, and developer forums
-3. **Own testing**: We use these models daily through AdaL CLI and share real observations
-4. **New releases**: When a major model drops, we test and add it within 48 hours
-
-**Want updates in your inbox?** [Subscribe to the weekly digest](/digest) — includes model ranking changes every week.
+Note how little separates the tiers on context now. A 1M window is close to standard at the frontier, so the deciding factors are price and how well a model holds a long task together.
 
 ---
 
-*Built with [AdaL CLI](https://sylph.ai)*
+## The Model Is Half the Answer
+
+A better model does not know how your team deploys, reviews, or releases. That knowledge lives in your repo and in the skills you give the agent — see [@skills](/protocols/atskills/) for how procedures reach an agent without occupying its context on every request.
+
+Pairing a mid-tier model with the right skill often beats a frontier model working from nothing.
+
+---
+
+*Built with [AdaL CLI](https://adalagent.ai/?utm_source=codingagents.md&utm_medium=referral&utm_campaign=benchmarks_models)*

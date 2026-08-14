@@ -1,6 +1,8 @@
 ---
 title: Gemini CLI
 description: "Google's open-source terminal AI agent — free tier, MCP support"
+sidebar:
+  order: 6
 ---
 
 ## Overview

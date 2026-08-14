@@ -1,6 +1,6 @@
 ---
 title: "Agent SDKs"
-description: "The frameworks and SDKs purpose-built for coding agents — from AdalFlow to OpenHands, SWE-agent, and beyond"
+description: "The frameworks and SDKs purpose-built for coding agents — AdaL, OpenHands, SWE-agent, Aider, and beyond"
 ---
 
 Agent SDKs are the **engines** behind AI coding agents. This section focuses on SDKs **purpose-built for coding** — frameworks designed to help LLMs read, write, debug, and ship code.
@@ -11,7 +11,7 @@ These SDKs are specifically built for **software engineering agents** — they u
 
 | SDK | By | Focus | Powers |
 |-----|----|-------|--------|
-| [**AdalFlow**](/sdks/adalflow/) | Sylph.AI | Self-evolving agents, auto-optimization | AdaL CLI |
+| [**AdaL SDK & Headless**](/sdks/adal/) | SylphAI | Embed the agent runtime, or drive it from CI | AdaL CLI |
 | [**OpenHands SDK**](/sdks/openhands/) | OpenHands | Cloud coding agent platform | OpenHands (formerly OpenDevin) |
 | [**SWE-agent**](/sdks/swe-agent/) | Princeton NLP | Autonomous issue fixing | SWE-bench SOTA |
 | [**Aider**](/sdks/aider/) | Paul Gauthier | Terminal pair programming | Aider CLI |
@@ -54,7 +54,7 @@ These are **general agent frameworks** that can be used to build coding agents, 
 
 ```
 Building a coding agent?
-├── Want self-evolving + auto-optimization? → AdalFlow
+├── Embedding a full agent runtime, or running one in CI? → AdaL SDK & Headless
 ├── Need cloud sandbox execution? → OpenHands SDK
 ├── Fixing GitHub issues autonomously? → SWE-agent
 ├── Terminal pair programming? → Aider

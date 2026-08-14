@@ -31,7 +31,7 @@ Aider is the original AI pair programming tool for the terminal. It pioneered ma
 ✅ Working on existing codebases
 ✅ Want git-integrated AI coding
 
-❌ Building a coding agent product (use AdalFlow)
+❌ Building a coding agent product (use the [AdaL SDK](/sdks/adal/))
 ❌ Need web UI (use Cursor or AdaL CLI)
 
 ---

@@ -1,6 +1,8 @@
 ---
 title: Amp
 description: "Sourcegraph's AI coding agent — codebase search, ACP-native, terminal + web"
+sidebar:
+  order: 10
 ---
 
 ## Overview

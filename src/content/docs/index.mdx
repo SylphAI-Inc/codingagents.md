@@ -23,8 +23,8 @@ import LogoMarquee from "../../../src/components/LogoMarquee.astro";
 
 <CardGrid>
   <LinkCard
-    title="10+ Coding Agents"
-    description="AdaL CLI · Amp · Claude Code · Codex · Copilot · Cursor · Devin · Gemini CLI · Windsurf"
+    title="23 Coding Agents"
+    description="AdaL CLI · Claude Code · Codex · Cursor · Copilot · Gemini CLI · Antigravity · Windsurf · Devin · Amp · Cline · OpenCode · Pi · Hermes · OpenClaw · Droid · Kiro · Goose · Kilo · Qoder · Trae · Freebuff · Roo"
     href="/agents/adal/"
   />
   <LinkCard
@@ -33,13 +33,13 @@ import LogoMarquee from "../../../src/components/LogoMarquee.astro";
     href="/formats/agents-md/"
   />
   <LinkCard
-    title="2 Protocols"
-    description="MCP (Model Context Protocol) · ACP (Agent Client Protocol)"
+    title="3 Protocols"
+    description="MCP (Model Context Protocol) · ACP (Agent Client Protocol) · @skills (AtSkills)"
     href="/protocols/mcp/"
   />
   <LinkCard
     title="8+ Agent SDKs"
-    description="AdalFlow · LangGraph · OpenAI Agents SDK · CrewAI · Microsoft Agent Framework · Pydantic AI · Smolagents · Strands Agents"
+    description="AdaL SDK · LangGraph · OpenAI Agents SDK · CrewAI · Microsoft Agent Framework · Pydantic AI · Smolagents · Strands Agents"
     href="/sdks/overview/"
   />
   <LinkCard
@@ -49,22 +49,59 @@ import LogoMarquee from "../../../src/components/LogoMarquee.astro";
   />
 </CardGrid>
 
+<div class="skills-section">
+
+## Where to find skills
+
+Agents need procedures, not just tools. A skill is a `SKILL.md` file that teaches an agent how your team does a thing — and most agents have no registry of their own, so you bring your own.
+
+**[@skills](/protocols/atskills/) is the universal standard and hub for agents to manage skills.** It works by path rather than by install, so any agent that reads files is already a client.
+
+<CardGrid>
+  <LinkCard
+    title="Browse 60,000+ skills"
+    description="atskills.one — the open catalogue, free to read and copy"
+    href="https://atskills.one"
+  />
+  <LinkCard
+    title="What is @skills?"
+    description="The protocol explained, with a 45-second video"
+    href="https://atskills.one/what-is-atskills"
+  />
+  <LinkCard
+    title="How the protocol works"
+    description="Reference, save, or auto-trigger — and how it compares to MCP"
+    href="/protocols/atskills/"
+  />
+  <LinkCard
+    title="Add it to your agent"
+    description="Level 0 needs one file. Level 1 splices one string."
+    href="https://atskills.one/for-agents"
+  />
+</CardGrid>
+
+</div>
+
 <div class="models-section">
 
 ## Models powering the agents
 
-Which LLMs perform best for coding? We track benchmarks weekly. [Full rankings →](/benchmarks/models-for-coding/)
+The current frontier for coding, newest first. [Full rankings and benchmarks →](/benchmarks/models-for-coding/)
 
-| Model | Provider | SWE-bench Verified | Context | Best For |
-|-------|----------|--------------------|---------|----------|
-| Claude Opus 4.6 | Anthropic | **80.8%** | 200K | Complex refactors, agentic coding |
-| GPT-5.2-Codex | OpenAI | **80.0%** | 128K | Terminal workflows, long-horizon tasks |
-| Claude Opus 4.5 | Anthropic | **80.9%** | 200K | Deep reasoning, legacy code |
-| Gemini 3 Flash | Google | **78.0%** | 1M | Large codebases, best value |
-| Claude Sonnet 4.5 | Anthropic | **77.2%** | 200K | Day-to-day development |
-| Gemini 3 Pro | Google | **~75%** | 1M | Multimodal, massive repos |
-| DeepSeek V3 | DeepSeek | 42.0% | 128K | Budget-friendly |
-| Qwen 2.5 Coder 32B | Alibaba | — | 128K | Local / privacy-first |
+| Model | Provider | Released | Context | Price /1M in-out | Best For |
+|-------|----------|----------|---------|------------------|----------|
+| Gemini 3.7 Flash | Google | 2026-08-13 | 1M | $1.50 / $7.50 | Coding and agentic work at Flash speed |
+| Claude Opus 5 | Anthropic | 2026-07-24 | 1M | $5 / $25 | Complex agentic coding |
+| GPT-5.6 Sol | OpenAI | 2026-07-09 | 922K | $5 / $30 | Frontier, hardest professional work |
+| GPT-5.6 Terra | OpenAI | 2026-07-09 | 922K | $2.50 / $15 | Balanced everyday work |
+| GPT-5.6 Luna | OpenAI | 2026-07-09 | 922K | $1 / $6 | High-volume, cost-sensitive |
+| Claude Sonnet 5 | Anthropic | 2026-06-30 | 1M | $3 / $15 | Most capable Sonnet — coding and agents |
+| Claude Fable 5 | Anthropic | 2026 | 1M | $10 / $50 | Frontier knowledge work |
+| Kimi K3 | Moonshot | 2026 | 917K | $3 / $15 | Frontier coding, deep reasoning |
+| GLM-5.2 | Z.ai | 2026 | 1M | $1.40 / $4.40 | Long-horizon coding |
+| Grok 4.6 | xAI | 2026 | 500K | $2 / $6 | Agentic coding |
+| MiniMax M3 | MiniMax | 2026 | 1M | $0.30 / $1.20 | Browser use, cheap agentic work |
+| DeepSeek V4 Pro | DeepSeek | 2026 | 616K | $0.44 / $0.87 | Frontier reasoning on a budget |
 
 </div>
 

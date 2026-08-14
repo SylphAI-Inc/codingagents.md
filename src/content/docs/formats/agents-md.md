@@ -2,6 +2,7 @@
 title: "AGENTS.md"
 description: "The universal open format for guiding AI coding agents — used by 60K+ repos"
 sidebar:
+  order: 1
   badge:
     text: Standard
     variant: success

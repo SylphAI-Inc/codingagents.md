@@ -1,6 +1,8 @@
 ---
 title: ".cursorrules"
 description: "Cursor's AI coding rules format — project, user, and team-level configuration"
+sidebar:
+  order: 5
 ---
 
 ## What is .cursorrules?

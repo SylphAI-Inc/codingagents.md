@@ -2,6 +2,7 @@
 title: Claude Code
 description: "Anthropic's agentic coding tool — deep reasoning, MCP support, terminal-native"
 sidebar:
+  order: 2
   badge:
     text: Popular
     variant: tip
