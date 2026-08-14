@@ -30,7 +30,7 @@ OpenHands (formerly OpenDevin) is the leading open-source platform for cloud cod
 ✅ Need sandboxed code execution
 ✅ Want to deploy agents as a service
 
-❌ Lightweight terminal-based agent (use AdalFlow or Aider)
+❌ Lightweight terminal-based agent (use [AdaL](/sdks/adal/) or Aider)
 
 ---
 
