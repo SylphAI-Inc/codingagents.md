@@ -13,7 +13,7 @@ sidebar:
 | **Type** | Terminal CLI (TUI) |
 | **Pricing** | Free — bring your own API key; Codex also supports ChatGPT OAuth |
 | **Protocol** | MCP |
-| **Config Formats** | YAML |
+| **Config Formats** | JSON |
 | **Language** | Go |
 | **License** | MIT |
 | **Repository** | [github.com/mochow13/keen-code](https://github.com/mochow13/keen-code) |
